@@ -1,0 +1,56 @@
+header(id="app")
+  .header-container
+    .header-buttonForMobile
+      button.buttonForHeader.langsButton 
+        include ../../../static/img/lang.svg
+      .langs 
+        .langs__block
+          include ../../../static/img/blockLang.svg
+        .langs__action 
+          a.p2 RU 
+          a.p2 EN 
+          a.p2 JA 
+          a.p2 CH 
+          a.p2 KO
+    .header-container-block 
+      .logo 
+        include ../../../static/img/logo1.svg
+    .header-buttonForMobile
+      button.buttonForHeader
+        .open-modal 
+          include ../../../static/img/menu.svg    
+    .header-container-block
+      .header-container-block__links 
+        a(href="#").p5 О ЯКУТИИ 
+        a(href="#").p5 АГЕНТСТВО
+        a(href="#").p5 ИНВЕСТКЛИМАТ
+        a(href="#").p5 ИНВЕСТСТАНДАРТ
+        a(href="#").p5 ИНВЕСТОРУ
+        a(href="#").p5 МЕДИА
+      .block_search
+          input(placeholder="Поиск")
+    .header-container-block
+      .header-container-block__action
+        button.buttonForHeader.langsButton 
+          include ../../../static/img/lang.svg
+        button.buttonForHeader.glasses
+          include ../../../static/img/glasses.svg
+        button.buttonForHeader.search 
+          include ../../../static/img/search.svg
+        button.buttonForHeader.exitFromSearch
+          include ../../../static/img/Exit.svg
+        button.buttonForHeader.mm
+          .open-modal 
+            include ../../../static/img/menu.svg
+        .langs 
+          .langs__block
+            include ../../../static/img/blockLang.svg
+          .langs__action 
+            a.p2 RU 
+            a.p2 EN 
+            a.p2 JA 
+            a.p2 CH 
+            a.p2 KO
+    include ../components/modalMenu.pug
+
+

@@ -1,0 +1,159 @@
+.main-container {
+
+
+  .main-block {
+    width: 1440px;
+    height: 640px;
+    display: flex;
+    flex-direction: row;
+    background-image: url("/img/bgnd.svg");
+
+    .radio-buttons {
+      display: flex;
+      flex-direction: column;
+ 
+      align-items: center;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 600px;
+
+      .radio-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(20% - 10px);
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        &:hover {
+          .radio-button__label {
+            
+
+          }
+        }
+
+        input[type='radio'] {
+          display: none;
+
+          &:checked+.radio-button__custom {
+            border-color: #f00;
+            background: #f00 !important;
+          }
+
+          &:checked+.radio-button__custom+.radio-button__label {
+            font-size: 18px;
+          }
+        }
+
+        .radio-button__custom {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          background: #F9F9F9;
+          border-radius: 50%;
+          margin-bottom: 5px;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: transparent;
+            background: #F9F9F9;
+          }
+        }
+
+        .radio-button__label {
+          font-family: $gilroyRegular;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          color: #F9F9F9;
+          letter-spacing: 0.06em;
+        }
+      }
+    }
+
+
+
+    .blockcc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .block {
+        position: relative;
+        height: 500px;
+
+        .buttonForBid {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          width: 190px;
+          height: 48px;
+          background: #FF1A1A;
+
+        }
+
+        .block_block {
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+
+          .p6 {
+            color: $color1;
+          }
+        }
+
+        .active {
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 140%;
+          letter-spacing: 0.06em;
+          font-family: $gilroyMedium;
+        }
+
+        #b1 {
+          position: absolute;
+          top: 35px;
+          left: -35px;
+          transform: rotate(30deg);
+        }
+
+        #b2 {
+          position: absolute;
+          top: 128px;
+          left: -84px;
+          transform: rotate(15deg);
+        }
+
+        #b3 {
+          position: absolute;
+          left: -140px;
+          top: 238px;
+        }
+
+        #b4 {
+          position: absolute;
+          left: -119px;
+          top: 355px;
+          transform: rotate(-15deg);
+        }
+
+        #b5 {
+          position: absolute;
+          left: -27px;
+          top: 461px;
+          transform: rotate(-30deg);
+        }
+      }
+    }
+  }
+}

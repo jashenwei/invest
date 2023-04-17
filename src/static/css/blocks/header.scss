@@ -1,0 +1,226 @@
+@import "../components/modalMenu";
+@import "../vars.scss";
+@import "../media.scss";
+
+header {
+  width: 100%;
+  background: $background;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #D9D9D9;
+
+  @include mobile {
+    padding: 0 27px 0 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-container {
+    width: 1300px;
+    height: 76px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      gap: 37px;
+      justify-content: flex-start;
+      width: 375px;
+
+    }
+
+    .header-buttonForMobile {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+
+      .langs.active {
+        display: block;
+      }
+
+      .langs {
+        z-index: 1;
+        display: none;
+
+        .langs__block {
+          position: absolute;
+          top: 54px;
+          left: 5px;
+        }
+
+        .langs__action {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          top: 72px;
+          left: 24px;
+          gap: 10px;
+        }
+      }
+    }
+
+    .header-container-block {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .block_search {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        transition: opacity 0.6s ease, visibility 0s linear 0.4s;
+        border-bottom: 1px solid#F9F9F9;
+        width: 866px;
+        height: 35px;
+        left:626px;
+        input {
+          background: none;
+          border: none;
+          width: 866px;
+          color: #D9D9D9;
+          font-family: $gilroyRegular;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          outline: none;
+          letter-spacing: 0.06em;
+        }
+
+        input::placeholder {
+          color: #D9D9D9;
+          font-family: $gilroyRegular;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          /* or 25px */
+
+          letter-spacing: 0.06em;
+        }
+      }
+
+      .block_search.active {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.6s ease, visibility 0s linear 0s;
+      }
+
+      .logo svg {
+        @include mobile {
+          width: 187.74px;
+          height: 14.83px;
+        }
+      }
+
+      .header-container-block__links.active {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.6s ease, visibility 0s linear 0s;
+      }
+
+      .header-container-block__links {
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        gap: 25px;
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        transition: opacity 0.6s ease, visibility 0.6s linear 0.4s;
+
+        @include mobile {
+          display: none;
+        }
+
+        a {
+          font-size: 16px;
+          color: #FFFFFF;
+          line-height: 19px;
+          letter-spacing: 0.04em;
+          font-weight: 500;
+        }
+
+        a:hover {
+          color: $colorForHover;
+          transition: all 0.4s;
+        }
+      }
+
+      .header-container-block__action {
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        gap: 25px;
+        width: 203px;
+        position: relative;
+      
+        .langsButton,
+        .glasses,
+        .search {
+          opacity: 1;
+          visibility: visible;
+          transition: opacity 0.6s ease, visibility 0.6s linear 0.4s;
+        }
+
+        .langsButton.active,
+        .glasses.active,
+        .search.active {
+          opacity: 0;
+          display: none;
+          visibility: hidden;
+          transition: opacity 0.6s ease, visibility 0s linear 0s;
+        }
+
+        .exitFromSearch {
+          opacity: 0;
+          display: none;
+          visibility: hidden;
+          transition: opacity 0.6s ease, visibility 0s linear 0s;
+        }
+
+        .exitFromSearch.active {
+          opacity: 1;
+          display: block;
+          visibility: visible;
+          transition: opacity 0.6s ease, visibility 0s linear 0s;
+        }
+
+        @include mobile {
+          display: none;
+        }
+
+        .langs.active {
+          display: block;
+        }
+
+        .langs {
+          z-index: 1;
+          display: none;
+
+          .langs__block {
+            position: absolute;
+            top: 34px;
+            left: -14px;
+          }
+
+          .langs__action {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 50px;
+            left: 4px;
+            gap: 10px;
+          }
+        }
+      }
+    }
+
+  }
+}

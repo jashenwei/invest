@@ -1,0 +1,55 @@
+extends ../layout/app
+
+block styles
+  
+
+block page
+  .main
+    include ../chunk/blocks/header.pug
+    .main-container
+      .main-block
+        //.block 
+          h1 ЗАГОЛОВОК
+          a.buttonForBid 
+            .p5 Подать заявку 
+        div.radio-buttons
+          label.radio-button
+            input(type='radio', name='radio', value='option1', checked)
+            span.radio-button__custom
+            span.radio-button__label Подать заявку
+          label.radio-button
+            input(type='radio', name='radio', value='option2')
+            span.radio-button__custom
+            span.radio-button__label Инвесткарта
+          label.radio-button
+            input(type='radio', name='radio', value='option3')
+            span.radio-button__custom
+            span.radio-button__label Инвестплощадки
+          label.radio-button
+            input(type='radio', name='radio', value='option4')
+            span.radio-button__custom
+            span.radio-button__label Меры поддержки
+          label.radio-button
+            input(type='radio', name='radio', value='option5')
+            span.radio-button__custom
+            span.radio-button__label Задать вопрос
+        //.blockcc 
+          .block
+            .block_block#b1
+              .p6 Подать заявку
+              input(type="radio", name="e") 
+            .block_block#b2
+              .p6 Инвесткарта 
+              input(type="radio", name="e") 
+            .block_block#b3
+              .p6.active Инвестплощадки
+              input(type="radio", name="e" ) 
+            .block_block#b4
+              .p6 Меры поддержки
+              input(type="radio", name="e") 
+            .block_block#b5
+              .p6 Задать вопрос
+              input(type="radio", name="e") 
+            include ../../static/img/ellipse.svg
+    include ../chunk/blocks/footer.pug
+
