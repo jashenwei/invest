@@ -9,7 +9,7 @@ radioButtons.forEach(radioButton => {
       if (rb.checked) {
         label.style.fontSize = '18px';
         custom.style.borderColor = '#f00';
-        custom.style.backgroundColor = '#f00';
+        custom.style.background = '#f00';
       } else {
         label.style.fontSize = '16px';
         custom.style.borderColor = '#444';
@@ -18,6 +18,27 @@ radioButtons.forEach(radioButton => {
     });
   });
 });
+
+
+const rs = document.querySelectorAll('.block_block input[type="radio"]');
+// const b1 = document.querySelector('#b1');
+// const b2 = document.querySelector('#b2');
+// const b3 = document.querySelector('#b3');
+// const b4 = document.querySelector('#b4');
+// const b5 = document.querySelector('#b5');
+const labels = document.querySelectorAll('label input[type="radio"]');
+
+labels.forEach((label) => {
+  label.parentElement.addEventListener('click', (event) => {
+    if (event.target !== label) {
+      const b3Text = document.querySelector('#b3 .radio-button__label').textContent;
+      const labelText = event.currentTarget.querySelector('.radio-button__label').textContent;
+      document.querySelector('#b3 .radio-button__label').textContent = labelText;
+      event.currentTarget.querySelector('.radio-button__label').textContent = b3Text;
+    }
+  });
+});
+
 
 const windowPathname = window.location.pathname;
 if (window.location.pathname === '/') {
