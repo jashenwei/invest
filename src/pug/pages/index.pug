@@ -1,45 +1,148 @@
 extends ../layout/app
 
 block styles
-  
+
 
 block page
   .main
     include ../chunk/blocks/header.pug
     .main-container
       .main-block
-        //.block 
-          h1 ЗАГОЛОВОК
-          a.buttonForBid 
-            .p5 Подать заявку 
-        .blockcc 
+        .main-block__block1
+          .block 
+            h1 ЗАГОЛОВОК
+            a.buttonForBid 
+              .p5 Подать заявку
+
+        .main-block__block2
+          .block 
+            .p3 09:30
+          include ../../static/img/spl.svg
+
+        .main-block__block3 
           .block
+            .img1
+              include ../../static/img/orbit_logo.svg
             label.block_block#b1
-              input(type="radio", name="radio",value='option1')
+              input(type="radio" name="radio" value='option1')
               span.radio-button__label Подать заявку 
               span.radio-button__custom#c1
-              
+
             label.block_block#b2
-              input(type="radio", name="radio",value='option2')   
+              input(type="radio" name="radio" value='option2')   
               span.radio-button__label Инвесткарта 
               span.radio-button__custom#c2
-              
+
             label.block_block#b3
-              input(type="radio", name="radio",value='option3' ) 
+              input(type="radio" name="radio" value='option3' ) 
               span.radio-button__label  Инвестплощадки 
               span.radio-button__custom#c3  
-              
+
             label.block_block#b4
-              input(type="radio", name="radio",value='option4')
+              input(type="radio" name="radio" value='option4')
               span.radio-button__label Меры поддержки 
               span.radio-button__custom#c4 
-               
+
             label.block_block#b5
-              input(type="radio", name="radio",value='option5') 
+              input(type="radio" name="radio" value='option5') 
               span.radio-button__label Задать вопрос
               span.radio-button__custom#c5
-              
+
           .img
-              include ../../static/img/ellipse.svg
-    include ../chunk/blocks/footer.pug
+            include ../../static/img/ellipse.svg
+      .main-block2
+        .block
+          h4 СИЛА ЯКУТИИ
+        .blocks
+          .blocks__block 
+            h3 1
+            h6 Место
+            .p4 Лидер по ВРП по Дальнему Востоку
+          .blocks__block
+            h3 2
+            h6 Место
+            .p4 Национальный инвестиционный рейтинг
+          .blocks__block 
+            h3 100
+            h6 Место
+            .p4 Человеческий капитал
+          .blocks__block 
+            h3 3
+            h6 Место
+            .p4 Инновационное развитие
+          .blocks__block 
+            h3 56
+            h6 Место
+            .p4 Природно ресурсный потенциал
+          .blocks__block 
+            h3 1
+            h6 Место
+            .p4 Индекс промышленного производства
+      .main-block3 
+        .block 
+          h2 ИНВЕСТСТАНДАРТ
+        .blocks
+          .blocks__block#id1
+            .background 
+              include ../../static/img/bgnd_card.svg 
+            .img 
+              include ../../static/img/book.svg
+            .blocks__block__body 
+              h6 Инвестиционная декларация 
+              .next 
+                .p6 Перейти
+                include ../../static/img/arrow.svg
+          .blocks__block
+            .background 
+              include ../../static/img/bgnd_card.svg  
+            .img 
+              include ../../static/img/map.svg
+            .blocks__block__body 
+              h6 Инвестиционная карта
+              .next 
+                .p6 Перейти
+                include ../../static/img/arrow.svg
+          .blocks__block
+            .background 
+              include ../../static/img/bgnd_card.svg  
+            .img 
+              include ../../static/img/humans.svg
+            .blocks__block__body 
+              h6 Инвестиционный комитет
+              .next 
+                .p6 Перейти
+                include ../../static/img/arrow.svg
+          .blocks__block
+            .background 
+              include ../../static/img/bgnd_card.svg  
+            .img 
+              include ../../static/img/bookmarket.svg
+            .blocks__block__body 
+              h6 Свод инвестиционных правил 
+              .next 
+                .p6 Перейти
+                include ../../static/img/arrow.svg
+          .blocks__block
+            .background 
+              include ../../static/img/bgnd_card.svg  
+            .img 
+              include ../../static/img/home.svg
+            .blocks__block__body 
+              h6 Агентство
+              .next 
+                .p6 Перейти
+                include ../../static/img/arrow.svg
+      .main-block4 
+        .block 
+          h2 ИНВЕСТИЦИОННЫЕ ПРОЕКТЫ
+        .blocks
+          .blocks__block
+            .container1
+              .border1 
+            .container2
+
+          .blocks_block 
+          .blocks_block 
+          .blocks_block 
+    //include ../chunk/blocks/footer.pug
 
