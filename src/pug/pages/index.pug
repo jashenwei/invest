@@ -1,5 +1,5 @@
 extends ../layout/app
-
+include ../chunk/components/button2.pug
 block styles
 
 
@@ -140,9 +140,62 @@ block page
             .container1
               .border1 
             .container2
+              h6 Агропромышленный комплекс
+          .blocks__block
+            .container3
+              .border1 
+            .container2
+              h6 Социальная сфера
+          .blocks__block
+            .container1
+              .border1 
+            .container2
+              h6 Транспорт и логистика
+          .blocks__block
+            .container3
+              .border1 
+            .container2
+              h6 Туризм
+        include ../chunk/components/button1.pug
+      .main-block5 
+        h2 ОДНО ОКНО
+        .blocks 
+          .img 
+            include ../../static/img/ellipse2.svg
+          .blocks_block
+            .block#block1 
+              h6 Подача заявки 
+              include ../../static/img/time.svg
+            .block#block2 
+              h6 Расcмотрение заявки
+              include ../../static/img/pen.svg
+            .block#block3
+              include ../../static/img/time2.svg 
+              h6 Подать заявку  
+            .block#block4
+              include ../../static/img/turn.svg 
+              h6 Подписание </br> соглашения 
+          .blocks__button
+            +button2('Все проекты')
+      .main-block6
+        h2 ИСТОРИЯ УСПЕХА
+        //.slider
+          .slider-1 1
+          .slider-2.active 2
+          .slider-3 3
+          .slider-4 4
+          .slider-5 5
+          .slider-6 6
+        <ul class="list">
+          <li class="hide">биба1</li>
+          <li class="prev">биба2</li>
+          <li class="act">биба3</li>
+          <li class="next">биба4</li>
+          <li class="next new-next">биба5</li>
+        </ul>
 
-          .blocks_block 
-          .blocks_block 
-          .blocks_block 
+        <div class="swipe"></div>
+        
+        <script src="https://hammerjs.github.io/dist/hammer.js"></script>
     //include ../chunk/blocks/footer.pug
 

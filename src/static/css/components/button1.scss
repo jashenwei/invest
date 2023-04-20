@@ -1,0 +1,19 @@
+.button1 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 176px;
+  height: 48px;
+  border: 1px solid #FF1A1A;
+  background: none;
+  color:#FF1A1A;
+}
+.button1:hover{
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  background: #FF1A1A;
+  color: white;
+}

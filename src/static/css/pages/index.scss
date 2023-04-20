@@ -382,9 +382,16 @@
     height: 664px;
     justify-content: center;
     align-items: center;
+    gap: 49px;
     background: url("/img/bgndForBlock2.svg"), #FFFFFF;
 
     .blocks {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+
       .blocks__block {
         width: 310px;
         height: 310px;
@@ -402,32 +409,65 @@
           height: 132px;
           display: block;
           position: relative;
+
           .border1 {
             display: block;
-            width: 320px;
+            width: 340px;
             height: 3px;
-            top:61.96px;  
+            top: 64.66px;
+            left: -16px;
+            z-index: 1;
             position: absolute;
             background: #FF1A1A;
             transform: rotate(-23.08deg);
           }
         }
 
-        
+        .container3 {
+          height: 132px;
+          display: block;
+          position: relative;
+
+          .border1 {
+            display: block;
+            width: 340px;
+            height: 3px;
+            top: 64.66px;
+            left: -16px;
+            z-index: 1;
+            position: absolute;
+            background: #FF1A1A;
+            transform: rotate(23.08deg);
+          }
+        }
+
+        .container3::after {
+          content: '';
+          position: absolute;
+          left: 0px;
+
+          top: 0px;
+          border: 132px solid transparent;
+          border-left: 310px solid $background;
+          border-bottom: 0 solid $background;
+        }
 
         .container2 {
-          display: block;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding: 0 0 15px 20px;
           background: $background;
-          height: 174px;
-          width: 100%;
-
+          height: 159px;
+          width: calc(100% - 20px);
+          border-bottom: 3px solid #FF1A1A;
         }
 
         .container1::after {
           content: '';
           position: absolute;
           right: 0px;
-          top: 1px;
+          top: 0px;
           border: 132px solid transparent;
           border-right: 310px solid $background;
           border-bottom: 0 solid $background;
@@ -436,4 +476,185 @@
     }
   }
 
+  .main-block5 {
+    width: 1440px;
+    height: 489px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: $background;
+
+    h2 {
+      color: #F9F9F9;
+    }
+
+    .blocks {
+      position: relative;
+      height: 303px;
+
+      .blocks__button {
+        position: absolute;
+        left: -100px;
+        top: 260px;
+      }
+
+      .blocks_block {
+        .block {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 20px;
+          position: absolute;
+        }
+
+        #block1 {
+          left: -530px;
+          top: 225px;
+        }
+
+        #block2 {
+          left: -490px;
+          top: 80px;
+        }
+
+        #block3 {
+          left: 150px;
+          top: 80px;
+        }
+
+        #block4 {
+          left: 240px;
+          top: 230px;
+        }
+      }
+
+      .img {
+        position: absolute;
+        top: 40px;
+        right: -290px;
+      }
+    }
+  }
+
+  .main-block6 {
+    color: #F9F9F9;
+    font-size: 25px;
+    width: 1440px;
+    height: 489px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    background: url("/img/bgndForBlock3.svg"), #FFFFFF;
+
+    .list {
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    .list li {
+      list-style-type: none;
+
+      width: 310px;
+      height: 310px;
+     
+      position: absolute;
+      left: 50%;
+      margin-left: -300px;
+      border-radius: 2px;
+      background: $background;
+      transition: transform 1s, opacity 1s;
+    }
+
+    .act {
+      width: 640px !important;
+      height: 350px !important;
+    }
+
+    .list .act {
+      opacity: 1;
+
+    }
+
+    .list .prev,
+    .list .next {
+      cursor: pointer;
+    }
+
+    .list .prev {
+      transform: translateX(-420px) scale(.85);
+    }
+
+    .list .next {
+      transform: translateX(720px) scale(.85);
+    }
+
+    .list .hide {
+      transform: translateX(-420px) scale(.85);
+    }
+
+    .list .new-next {
+      transform: translateX(420px) scale(.85);
+    }
+
+    .list .hide,
+    .list .new-next {
+      opacity: 0;
+      transition: opacity .5s, transform .5s;
+    }
+
+    .swipe {
+      width: 270px;
+      height: 200px;
+      position: absolute;
+      background-color: green;
+      border-radius: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    .slider {
+      color: #F9F9F9;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      overflow-y: hidden;
+      height: 350px;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 1300px;
+
+
+
+      .slider-1,
+      .slider-2,
+      .slider-3,
+      .slider-4,
+      .slider-5,
+      .slider-6 {
+        display: flex;
+        width: 310px;
+        height: 310px;
+        background: $background;
+
+      }
+
+      .active {
+        width: 640px;
+        height: 350px;
+      }
+    }
+
+
+  }
 }
