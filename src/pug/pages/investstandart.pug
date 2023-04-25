@@ -1,0 +1,34 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+  - var title = "АГЕНСТВО";
+
+block page
+    .main-invest
+        include ../chunk/blocks/header.pug
+        .main-blocks
+            .main-block1
+                .path 
+                    .p1 Главная
+                    .block1_block 
+                    .p1 Инвестстандарт 
+                .main-block1-blocks 
+                    h1 Агентство
+                    .blocks
+                        .p2 Об агентсве
+                        .border 
+                        .p2 Команда
+                        .border 
+                        .p2 Услуги агентства  
+                    .blocks
+                        .p2 Отчеты
+                        .border 
+                        .p2 Противодействие корупции
+            .main-block2
+                h6 «Следует отметить, что высококачественный прототип будущего проекта выявляет срочную потребность форм воздействия»
+                .border 
+                h6 Стручкова Анна Александровна
+                .p4 Генеральный директор InvestYakutia
+        include ../chunk/blocks/footer.pug

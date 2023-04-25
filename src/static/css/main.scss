@@ -4,8 +4,12 @@
 @import "vars.scss";
 @import "media.scss";
 @import "./pages/index.scss";
+@import "./pages/about_yakutia.scss";
 @import './components/button1.scss';
 @import './components/button2.scss';
+@import './pages/agency.scss';
+@import './pages/municipalities.scss';
+@import './pages/investstandart.scss';
 
 @font-face {
   font-family: "gilroy-regular";
@@ -138,7 +142,7 @@ h3 {
   font-size: 38px;
   line-height: 140%;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
+  
 
   @include mobile {
     font-weight: 600;

@@ -1,5 +1,6 @@
 extends ../layout/app
 include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
 block styles
 
 
@@ -23,30 +24,36 @@ block page
           .block
             .img1
               include ../../static/img/orbit_logo.svg
+               
+            span.radio-button__custom#c1
+            span.radio-button__custom#c2
+            span.radio-button__custom#c3
+            span.radio-button__custom#c4
+            span.radio-button__custom#c5
             label.block_block#b1
               input(type="radio" name="radio" value='option1')
               span.radio-button__label Подать заявку 
-              span.radio-button__custom#c1
+            
 
             label.block_block#b2
               input(type="radio" name="radio" value='option2')   
               span.radio-button__label Инвесткарта 
-              span.radio-button__custom#c2
+            
 
             label.block_block#b3
               input(type="radio" name="radio" value='option3' ) 
               span.radio-button__label  Инвестплощадки 
-              span.radio-button__custom#c3  
+              
 
             label.block_block#b4
               input(type="radio" name="radio" value='option4')
               span.radio-button__label Меры поддержки 
-              span.radio-button__custom#c4 
+            
 
             label.block_block#b5
               input(type="radio" name="radio" value='option5') 
               span.radio-button__label Задать вопрос
-              span.radio-button__custom#c5
+            
 
           .img
             include ../../static/img/ellipse.svg
@@ -156,7 +163,7 @@ block page
               .border1 
             .container2
               h6 Туризм
-        include ../chunk/components/button1.pug
+        +button1('Все проекты')
       .main-block5 
         h2 ОДНО ОКНО
         .blocks 
@@ -170,32 +177,76 @@ block page
               h6 Расcмотрение заявки
               include ../../static/img/pen.svg
             .block#block3
-              include ../../static/img/time2.svg 
-              h6 Подать заявку  
+              include ../../static/img/time.svg 
+              h6 Решение  
             .block#block4
               include ../../static/img/turn.svg 
               h6 Подписание </br> соглашения 
           .blocks__button
-            +button2('Все проекты')
+            +button2('Подать заявку')
       .main-block6
         h2 ИСТОРИЯ УСПЕХА
-        //.slider
-          .slider-1 1
-          .slider-2.active 2
-          .slider-3 3
-          .slider-4 4
-          .slider-5 5
-          .slider-6 6
-        <ul class="list">
-          <li class="hide">биба1</li>
-          <li class="prev">биба2</li>
-          <li class="act">биба3</li>
-          <li class="next">биба4</li>
-          <li class="next new-next">биба5</li>
-        </ul>
+        .slider
+          .slider-1
+            .block 
+              h5 Проект
+              .p4 Краткий текст проекта, объясняющий о чем этот проект    
+          .slider-2.active
+            .block
+              h5 Проект номер 1
+              .p4 Краткий текст проекта, объясняющий о чем этот проект   
+          .slider-3
+            .block 
+              h5 Проект
+              .p4 Краткий текст проекта, объясняющий о чем этот проект
 
-        <div class="swipe"></div>
-        
+        //- <ul class="list">
+        //-   <li class="hide">биба1</li>
+        //-   <li class="prev">биба2</li>
+        //-   <li class="act">биба3</li>
+        //-   <li class="next">биба4</li>
+        //-   <li class="next new-next">биба5</li>
+        //- </ul>
+
+        //- <div class="swipe"></div>
+        +button1('Все проекты')
         <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-    //include ../chunk/blocks/footer.pug
+      .main-block7 
+        h2 НОВОСТИ
+        .blocks 
+          .blocks_block1
+            .blockDate
+              .p4 16.02.2023
+            .blockInfo 
+              .blockInfoTitle 
+                h5 Новость номер 1
+              .blockInfoText 
+                h6 Краткий текст новости, объясняющий о чем этот проект   
+          .blocks_block2 
+            .block
+              .p6 16.02.2023
+              h6 Новость номер 2 
+            .block
+              .p6 16.02.2023
+              h6 Новость номер 3  
+            .block
+              .p6 16.02.2023
+              h6 Новость номер 4 
+            .block 
+              .p6 16.02.2023
+              h6 Новость номер 5 
+        +button2('Все новости')
+      .main-block8
+        .title 
+          h2 ОБРАТНАЯ СВЯЗЬ
+          h6 Свяжитесь с нами
+        +button1('Отправить сообщение')
+      .main-block9 
+        .title 
+          h2 ГОС УСЛУГИ
+          h6 Напишите нам 
+        +button1('Написать о проблеме')
+      .main-block10 
+        +button1('Направить обращение в аппарат полномочного представителя Президента РФ в ДФО')
+    include ../chunk/blocks/footer.pug
 

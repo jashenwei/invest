@@ -1,4 +1,69 @@
+//const { event } = require("jquery");
+//dropdown
+const dButtons = document.querySelectorAll('.dropdown-trigger button');
+
+// Loop through dropdown buttons and add event listeners
+dButtons.forEach(button => {
+  button.addEventListener('click', () => {
+
+    // Get dropdown menu and toggle 'is-active' class
+    const dropdownMenu = button.parentElement.nextElementSibling;
+    dropdownMenu.classList.toggle('is-active');
+    // Toggle 'is-active' class and rotate arrow icon
+    button.parentElement.classList.toggle('is-active');
+    const arrowIcon = button.querySelector('svg');
+    arrowIcon.classList.toggle('rotate-180');
+  });
+});
+
+
+// Get all dropdown items
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+// Loop through dropdown items and add event listeners
+dropdownItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // Get selected option and set button text
+    const selectedOption = item.textContent;
+    const dropdownButton = item.closest('.dropdown').querySelector('.user');
+    dropdownButton.textContent = selectedOption;
+    // Hide dropdown menu
+    const dropdownMenu = item.closest('.dropdown-menu');
+    dropdownMenu.classList.remove('is-active');
+    const arrowIcon = document.querySelector('.dropdown-trigger svg');
+
+    arrowIcon.classList.remove('rotate-180');
+
+  });
+});
+
+// Add event listener to close dropdown menu when clicking outside of it
+document.addEventListener('click', (event) => {
+  const dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns.forEach(dropdown => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.querySelector('.dropdown-menu').classList.remove('is-active');
+      dropdown.querySelector('.dropdown-trigger').classList.remove('is-active');
+      const arrowIcon = dropdown.querySelector('.dropdown-trigger svg');
+      if (arrowIcon.parentElement.classList.contains('is-active')) {
+        arrowIcon.classList.add('rotate-180');
+      } else {
+        arrowIcon.classList.remove('rotate-180');
+      }
+    }
+  });
+});
 const radioButtons = document.querySelectorAll('.radio-button input[type="radio"]');
+
+
+  // $(".block_block").click(function () { // задаем функцию при нажатиии на элемент с классом start
+  //   $("span").animate({
+  //    transform: "translateY(40px)",
+  //     transform: "rotate(90deg)"
+  //   }, 1000);
+  // });
+
+
 
 radioButtons.forEach(radioButton => {
   radioButton.addEventListener('change', () => {
@@ -214,3 +279,21 @@ swipe.on("swipeleft", (ev) => {
 swipe.on("swiperight", (ev) => {
   prev();
 });
+
+
+
+// document.addEventListener('click', (event) => {
+//   const dropdowns = document.querySelectorAll('.table');
+//   dropdowns.forEach(dropdown => {
+//     if (!dropdown.contains(event.target)) {
+//       dropdown.querySelector('.cards-container-main__cards__myCards__block').classList.remove('is-active');
+//       dropdown.querySelector('.cards-container-main__cards__myCards__group__image').classList.remove('is-active');
+//       const arrowIcon = dropdown.querySelector('cards-container-main__cards__myCards__group__image svg');
+//       if (arrowIcon.parentElement.classList.contains('is-active')) {
+//         arrowIcon.classList.add('rotate-180');
+//       } else {
+//         arrowIcon.classList.remove('rotate-180');
+//       }
+//     }
+//   });
+// });

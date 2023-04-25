@@ -1,0 +1,264 @@
+.main-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    z-index: 1;
+    //height: 100%;
+
+    .main-blocks1 {
+        width: 1370px;
+        height: 760px;
+        display: flex;
+        background-image: url("/img/nikolaev.svg");
+        padding-left: 70px;
+        padding-top: 40px;
+        flex-direction: column;
+        gap: 40px;
+
+        .main-blocks1-block1 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+
+            .p1 {
+                color: #f9f9f9;
+
+            }
+
+            .block1_block {
+                display: flex;
+                width: 5px;
+                height: 5px;
+                background: #FF1A1A;
+                transform: rotate(45deg);
+            }
+        }
+
+        .main-blocks1-block2 {
+            display: flex;
+            //width: 713px;
+            gap: 20px;
+
+            h1 {
+                color: #f9f9f9;
+            }
+
+            flex-direction: column;
+
+            .block2_blocks {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 18px;
+
+                width: 713px;
+                height: 154px;
+
+                opacity: 0.8;
+
+                .border {
+                    display: flex;
+                    width: 1px;
+                    height: 15px;
+                    background: #F9F9F9;
+                }
+
+                .p2 {
+                    color: #f9f9f9;
+                    text-decoration: none;
+                    border-bottom: 1px solid #f9f9f9;
+                    cursor: pointer;
+                }
+                
+
+                .block1 {
+                    width: 711px;
+                    height: 25px;
+                    white-space: nowrap;
+
+                }
+
+                .block2 {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 20px;
+                    height: 25px;
+                    white-space: nowrap;
+
+                }
+
+                .block3 {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    height: 25px;
+                    white-space: nowrap;
+                    align-items: center;
+                }
+
+                .block4 {
+                    width: 326px;
+                    height: 25px;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .main-blocks1-block3 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 16px;
+            width: 505px;
+            height: 185px;
+            margin-top: 66px;
+
+            .p4 {
+                color: #F9F9F9;
+            }
+            
+
+            .border {
+                display: flex;
+                width: 335px;
+                height: 1px;
+                background: #F9F9F9;
+            }
+        }
+
+        .button2 {
+            width: 365px;
+        }
+    }
+
+    .main-blocks2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1440px;
+        height: 2612px;
+        background: url("/img/bgndForBlock4.svg"),
+            #FFFFFF;
+        gap:80px;
+        padding-top: 80px;
+
+        .main-blocks2-block {
+            //padding: 70px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            width: 1300px;
+            height: 426px;
+            .blocks_block2 {}
+
+            .blocks_block3 {
+                display: flex;
+                width: 873px;
+                height: 361px;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #1D1E33
+            }
+
+            .blocks {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                width: 1300px;
+                height: 180px;
+                justify-content: center;
+                align-items: center;
+                border-left: 1px solid #232323;
+                border-right: 1px solid #232323;
+
+                .blocks__block {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    justify-content: center;
+                    align-items: center;
+                    width: 200px;
+                    height: 180px;
+
+                    h3 {
+                        color: #FF1A1A
+                    }
+
+                    h6 {
+                        color: $color2;
+                    }
+
+                    .p4 {
+                        width: 157px;
+                        text-align: center;
+                    }
+                }
+
+            }
+        }
+
+        .main-blocks3-block {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 20px;
+            width: 1300px;
+            height: 361px;
+
+            .blocks_block2 {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .blocks_block3 {
+                display: flex;
+                width: 873px;
+                height: 311px;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #1D1E33;
+                padding: 25px;
+            }
+
+            .main-blocks3-block-container {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .blocks_block4 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                }
+
+                .blocks_block5 {
+                    display: flex;
+                    width: 1300px;
+                    height: 500px;
+                    border: 1px solid #1D1E33;
+                    justify-content: center;
+                    align-items: center;
+
+                    .video {
+                        display: flex;
+                        width: 1250px;
+                        height: 450px;
+                        background: #353535;
+                    }
+                }
+            }
+        }
+    }
+}
