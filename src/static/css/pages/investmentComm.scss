@@ -1,0 +1,279 @@
+.main-com {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  .main-blocks {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+    width: 1440px;
+    height: 1042px;
+    padding: 41px 70px;
+    background: url("/img/bgndForPage1.svg"), white;
+
+    .main-block1 {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .path {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+
+        .p1 {
+          color: $color3;
+
+        }
+
+        .block1_block {
+          display: flex;
+          width: 5px;
+          height: 5px;
+          background: #FF1A1A;
+          transform: rotate(45deg);
+        }
+      }
+
+      .main-block1-cont {
+        display: flex;
+        flex-direction: column;
+
+        .back {
+          .p2 {
+            color: $color4;
+          }
+        }
+      }
+    }
+
+    .main-block2 {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+
+      h2 {
+        text-transform: none;
+      }
+
+      .dropdown {
+        position: relative;
+
+        .card__select {
+          box-sizing: border-box;
+          width: 970px;
+          height: 60px;
+          display: flex;
+          background: #1D1E33;
+          justify-content: space-between;
+          border: none;
+          align-items: center;
+          padding: 0 30px 0 30px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+          color: #FFFFFF;
+
+          .user {
+            color: #FFFFFF;
+
+            padding: 0;
+            margin: 0;
+
+          }
+
+          .imgRot {
+            transform: rotate(-180deg);
+          }
+
+          .imgRot .rotate-180 {
+            transform: rotate(-180deg);
+            transition: transform 0.3s ease-in-out;
+          }
+
+          .imgRot .rotate-180-1 {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease-in-out;
+          }
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+          top: -4px;
+          position: absolute;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 12px;
+
+          color: #0078D2;
+
+
+
+        }
+
+        .dropdown-menu {
+          position: absolute;
+          z-index: 10;
+          display: none;
+          background: #1D1E33;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+          width: 100%;
+          overflow-y: auto;
+          box-sizing: border-box;
+          padding: 10px 0 30px 0;
+          overflow-y: scroll;
+          height: 400px;
+
+        }
+
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px #F9F9F9;
+          background: #F9F9F9;
+          width: 8px;
+
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          width: 8px;
+          height: 98px;
+          background: #FF1A1A;
+        }
+
+        .dropdown-menu.is-active {
+          display: block;
+        }
+
+        .dropdown-content .dropdown-item {
+          text-decoration: none;
+          display: block;
+          color: #FFFFFF;
+          padding: 20px 30px 0px 30px;
+          box-sizing: border-box;
+        }
+
+
+      }
+    }
+    .mm{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      
+      .main-blocks {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 30px;
+        width: 1276px;
+        height: 453px;
+        padding: 0;
+        h4 {
+          width: 921px;
+          height: 78px;
+        }
+  
+        .main-block3 {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 262px;
+          width: 1276px;
+          height: 345px;
+  
+  
+          .main-block3-cont1 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 20px;
+            width: 707px;
+            height: 345px;
+  
+            .cont1-block1 {
+              display: flex;
+              width: 345px;
+              height: 345px;
+              background: url("/img/struchkova2.svg");
+            }
+  
+            .cont1-blocks2 {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+  
+              .block1 {
+                white-space: nowrap;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+  
+                h6 {
+                  color: #1D1E33;
+                }
+              }
+  
+              .border {
+                display: flex;
+                width: 330px;
+                height: 1px;
+                background: #858585;
+              }
+  
+              .block2 {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+  
+                .block2-text {
+                  display: flex;
+                  flex-direction: row;
+                  gap: 8px;
+                }
+              }
+            }
+  
+  
+  
+          }
+  
+          .main-block3-cont2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 306px;
+            height: 293px;
+            border-left: 1px solid #858585;
+            gap: 40px;
+  
+            .cont2-block1 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+  
+            }
+  
+          }
+        }
+  
+  
+      }
+    }
+    
+  }
+}

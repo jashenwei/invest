@@ -10,6 +10,9 @@
 @import './pages/agency.scss';
 @import './pages/municipalities.scss';
 @import './pages/investstandart.scss';
+@import './pages/investmentComm.scss';
+@import './pages/investRules.scss';
+@import './pages/about_agency.scss';
 
 @font-face {
   font-family: "gilroy-regular";
@@ -126,7 +129,7 @@ h2 {
   font-size: 40px;
   line-height: 140%;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
+ 
 
   @include mobile {
     font-weight: 700;
