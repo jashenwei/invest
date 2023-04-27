@@ -1,3 +1,31 @@
+const block = document.querySelectorAll('.main-block__block3 label')
+const main = block[2]
+
+block.forEach(function (e, index) {
+
+
+  e.addEventListener('click', () => {
+
+    //console.log(l.length)
+    if (e !== main) {
+      e.animate({
+        "paddingTop": "5px"
+      }, 500)
+      e.animate({
+        "opacity": "1"
+      }, 700)
+      main.animate({
+        "paddingTop": "5px"
+      }, 500)
+
+      main.animate({
+        "opacity": "1"
+      }, 700)
+    }
+  });
+})
+
+
 //const { event } = require("jquery");
 //dropdown
 const dButtons = document.querySelectorAll('.dropdown-trigger button');
@@ -56,12 +84,12 @@ document.addEventListener('click', (event) => {
 const radioButtons = document.querySelectorAll('.radio-button input[type="radio"]');
 
 
-  // $(".block_block").click(function () { // задаем функцию при нажатиии на элемент с классом start
-  //   $("span").animate({
-  //    transform: "translateY(40px)",
-  //     transform: "rotate(90deg)"
-  //   }, 1000);
-  // });
+// $(".block_block").click(function () { // задаем функцию при нажатиии на элемент с классом start
+//   $("span").animate({
+//    transform: "translateY(40px)",
+//     transform: "rotate(90deg)"
+//   }, 1000);
+// });
 
 
 
@@ -96,14 +124,25 @@ const labels = document.querySelectorAll('label input[type="radio"]');
 labels.forEach((label) => {
   label.parentElement.addEventListener('click', (event) => {
     if (event.target !== label) {
+
       const b3Text = document.querySelector('#b3 .radio-button__label').textContent;
       const labelText = event.currentTarget.querySelector('.radio-button__label').textContent;
       document.querySelector('#b3 .radio-button__label').textContent = labelText;
       event.currentTarget.querySelector('.radio-button__label').textContent = b3Text;
+
     }
   });
 });
 
+// const d = document.querySelectorAll('.main-block2 .block2-cont1')
+
+// d.forEach(a => {
+//   a.addEventListener('click', (e) => {
+//     if (e.target === a) {
+//       a.classList.add('.active');
+//     }
+//   })
+// })
 
 const windowPathname = window.location.pathname;
 if (window.location.pathname === '/') {
@@ -279,21 +318,3 @@ swipe.on("swipeleft", (ev) => {
 swipe.on("swiperight", (ev) => {
   prev();
 });
-
-
-
-// document.addEventListener('click', (event) => {
-//   const dropdowns = document.querySelectorAll('.table');
-//   dropdowns.forEach(dropdown => {
-//     if (!dropdown.contains(event.target)) {
-//       dropdown.querySelector('.cards-container-main__cards__myCards__block').classList.remove('is-active');
-//       dropdown.querySelector('.cards-container-main__cards__myCards__group__image').classList.remove('is-active');
-//       const arrowIcon = dropdown.querySelector('cards-container-main__cards__myCards__group__image svg');
-//       if (arrowIcon.parentElement.classList.contains('is-active')) {
-//         arrowIcon.classList.add('rotate-180');
-//       } else {
-//         arrowIcon.classList.remove('rotate-180');
-//       }
-//     }
-//   });
-// });

@@ -9,15 +9,20 @@
   height: 48px;
   border: 1px solid #FF1A1A;
   background: none;
-  color: #FF1A1A;
+  color: #FF1A1A !important;
   padding: 13px 35px;
   white-space: nowrap;
 
 }
-
+.button1 > a{
+ color: #FF1A1A !important;
+}
+.button1:hover > a {
+  color: white !important;
+}
 .button1:hover {
   cursor: pointer;
   transition: all 0.5s ease-out;
   background: #FF1A1A;
-  color: white;
+  color: white !important;
 }

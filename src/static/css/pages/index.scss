@@ -73,7 +73,7 @@
           position: absolute;
           top: 204px;
           right: -273px;
-          
+
         }
 
         height: 500px;
@@ -119,25 +119,24 @@
           left: 95px;
           top: 440px;
         }
-        .block_block.move{
+
+        .block_block.move {
           opacity: 0;
-          
+
         }
+
         .block_block {
           display: flex;
           flex-direction: row;
           gap: 20px;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
           height: 20px;
 
           .radio-button__label {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: flex-end;
+
             font-family: $gilroyRegular;
             font-weight: 400;
             font-size: 14px;
@@ -146,10 +145,10 @@
             letter-spacing: 0.06em;
             cursor: pointer;
             white-space: nowrap;
-            
+
           }
 
-          
+
 
           input[type="radio"] {
             display: none;
@@ -166,7 +165,7 @@
           line-height: 140%;
           letter-spacing: 0.06em;
           font-family: $gilroyMedium;
-          
+
         }
 
         #b1 {
@@ -178,15 +177,15 @@
 
         #b2 {
           position: absolute;
-          top: 118px;
-          left: -84px;
+          top: 112px;
+          left: -100px;
           transform: rotate(15deg);
         }
 
         #b3 {
           position: absolute;
           left: -235px;
-          top: 238px;
+          top: 244px;
 
           .radio-button__custom {
             background: #FF1A1A;
@@ -526,26 +525,83 @@
           align-items: center;
           gap: 20px;
           position: absolute;
+
+          .ellipse {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: #F9F9F9;
+
+            svg {}
+
+          }
         }
 
         #block1 {
-          left: -530px;
+          left: -520px;
           top: 225px;
+
+          .ellipse {
+            animation-delay: 0s;
+            animation: light 6.5s infinite;
+          }
         }
 
         #block2 {
           left: -490px;
           top: 80px;
+
+          .ellipse {
+            animation-delay: 6.5s;
+            animation: light 9.0s infinite;
+          }
         }
 
         #block3 {
           left: 150px;
           top: 80px;
+
+          .ellipse {
+            animation-delay: 9.0s;
+            animation: light 11.5s infinite;
+          }
         }
 
         #block4 {
           left: 240px;
           top: 230px;
+
+          .ellipse {
+            animation-delay: 11.5s;
+            animation: light 15.5s infinite;
+          }
+        }
+
+        @keyframes light {
+          0% {
+            background-color: #F9F9F9;
+            box-shadow: 0 0 7px #F9F9F9;
+          }
+          30% {
+            background-color: #F9F9F9;
+            box-shadow: 0 0 7px #FF1A1A;
+          }
+          60% {
+            background-color: #FF1A1A;
+            box-shadow: 0 0 13px #FF1A1A;
+          }
+           80% {
+             background-color: #FF1A1A;
+             box-shadow: 0 0 6px #FF1A1A;
+           }
+
+          100% {
+            background-color: #F9F9F9;
+            box-shadow: 0 0 3px #F9F9F9;
+          }
         }
       }
 
@@ -793,39 +849,47 @@
       width: 260px;
     }
   }
-  .main-block9{
+
+  .main-block9 {
     width: 1320px;
     height: 192px;
     display: flex;
     flex-direction: column;
     background: $background;
     padding: 60px;
-    gap:40px;
-    .title{
+    gap: 40px;
+
+    .title {
       display: flex;
       flex-direction: column;
-      gap:20px;
-      h2, h6{
-        color:#F9F9F9;
+      gap: 20px;
+
+      h2,
+      h6 {
+        color: #F9F9F9;
       }
     }
-    .button1{
+
+    .button1 {
       width: 253px;
       border: 1px solid #F9F9F9;
       color: #F9F9F9
     }
-    .button1:hover{
-    background: none;
+
+    .button1:hover {
+      background: none;
     }
   }
-  .main-block10{
+
+  .main-block10 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 1440px;
     height: 190px;
     background: url("/img/bgndForBlock3.svg"), #F9F9F9;
-    .button1{
+
+    .button1 {
       width: 605px;
       white-space: pre-wrap;
     }

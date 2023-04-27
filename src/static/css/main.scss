@@ -13,6 +13,10 @@
 @import './pages/investmentComm.scss';
 @import './pages/investRules.scss';
 @import './pages/about_agency.scss';
+@import './pages/invest_team.scss';
+@import './pages/invest_projects.scss';
+@import './pages/agro_complex.scss';
+//@import './components/orbit.scss';
 
 @font-face {
   font-family: "gilroy-regular";
@@ -55,6 +59,7 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: none;
 }
 
 input {

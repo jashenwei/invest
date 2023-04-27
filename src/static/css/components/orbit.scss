@@ -1,0 +1,74 @@
+.orbit {
+    box-sizing: border-box;
+    width: 692px;
+    height: 571px;
+    position: relative;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    margin: 0;
+    padding: 0;
+    font-family: $gilroyRegular;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #F9F9F9;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    white-space: nowrap;
+
+    .img1 {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 500;
+        width: 500;
+        
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 100px;
+            
+        }
+        display: flex;
+        
+
+    }
+
+    .block1,
+    .block2,
+    .block3,
+    .block4,
+    .block5 {
+        display: flex;
+        gap:20px;
+        width: max-content;
+        min-width: calc(33% - 14px);
+        .radio-button__custom {
+            width: 24px;
+            height: 24px;
+            background: #F9F9F9;
+            border-radius: 50%;
+            
+            border: none;
+            top: 0;
+            //left:110px;
+        }
+
+    }
+    .block1{
+    }
+    .block2{
+    }
+    .block3{
+    }
+    .block4{
+    }
+    .block5{
+    }
+}

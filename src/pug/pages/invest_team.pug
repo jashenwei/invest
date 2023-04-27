@@ -1,0 +1,101 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+    - var title = "Об агенстве";
+
+block page
+    .main-team
+        include ../chunk/blocks/header.pug
+        .main-blocks
+            .main-block1
+                .path 
+                    .p1 Главная
+                    .block1_block 
+                    .p1 Инвестстандарт
+                    .block1_block 
+                    .p1 Агентство
+                    .block1_block 
+                    .p1 Инвестиционная команда Республики Саха (Якутия)
+                .main-block1-blocks      
+                    .blocks 
+                        a(href="/agency.html").p2 Агентство
+                    h1 Инвестиционная команда Республики Саха (Якутия)
+            .main-block2
+                .block2-cont1 
+                    .cont1-block
+                        .photo 
+                        .texts 
+                            .text
+                                h6 Стручкова Анна Александровна
+                                .p4 Генеральный директор 
+                            .cont1border
+                            .text
+                                .text1
+                                    .p5 Телефон:
+                                    .p4 + 7999-173-24-34 
+                                .text1
+                                    .p5 Почта:
+                                    .p4 struchkova@investyakutia.com
+                    .border
+                    .cont1-block
+                        .photo 
+                        .texts 
+                            .text
+                                h6 Диряхова Юлиана Егоровна
+                                .p4 Заместитель генерального директора 
+                            .cont1border
+                            .text
+                                .text1
+                                    .p5 Телефон:
+                                    .p4 + 7999-173-24-34 
+                                .text1
+                                    .p5 Почта:
+                                    .p4 diryakhova@investyakutia.com
+                .block2-cont2 
+                    .cont2-block
+                        .photo 
+                        .texts 
+                            .text
+                                h6 Хабутдинова Надежда Ядкаровна
+                                .p4 Начальник отдела продвижения проектов 
+                            .cont1border
+                            .text
+                                .text1
+                                    .p5 Телефон:
+                                    .p4 + 7999-173-24-34 
+                                .text1
+                                    .p5 Почта:
+                                    .p4 struchkova@investyakutia.com
+                    .border
+                    .cont2-block
+                        .photo 
+                        .texts 
+                            .text
+                                h6 Максимова Екатерина Витальевна
+                                .p4 Начальник отдела туристического потенциала и обеспечения организационной деятельности 
+                            .cont1border
+                            .text
+                                .text1
+                                    .p5 Телефон:
+                                    .p4 + 7999-173-24-34 
+                                .text1
+                                    .p5 Почта:
+                                    .p4 struchkova@investyakutia.com
+                    .border
+                    .cont2-block
+                        .photo 
+                        .texts 
+                            .text
+                                h6 Маркова Виктория Николаевна
+                                .p4 Начальник отдела продвижения проектов 
+                            .cont1border
+                            .text
+                                .text1
+                                    .p5 Телефон:
+                                    .p4 + 7999-173-24-34 
+                                .text1
+                                    .p5 Почта:
+                                    .p4 struchkova@investyakutia.com
+        include ../chunk/blocks/footer.pug

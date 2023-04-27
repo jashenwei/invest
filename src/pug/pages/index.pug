@@ -20,7 +20,8 @@ block page
             .p3 09:30
           include ../../static/img/spl.svg
 
-        .main-block__block3 
+        .main-block__block3
+          //include ../chunk/components/orbit.pug
           .block
             .img1
               include ../../static/img/orbit_logo.svg
@@ -171,16 +172,20 @@ block page
             include ../../static/img/ellipse2.svg
           .blocks_block
             .block#block1 
-              h6 Подача заявки 
-              include ../../static/img/time.svg
+              h6 Подача заявки
+              .ellipse 
+                include ../../static/img/time3.svg
             .block#block2 
               h6 Расcмотрение заявки
-              include ../../static/img/pen.svg
+              .ellipse
+                include ../../static/img/pen.svg
             .block#block3
-              include ../../static/img/time.svg 
+              .ellipse
+                include ../../static/img/time3.svg 
               h6 Решение  
             .block#block4
-              include ../../static/img/turn.svg 
+              .ellipse 
+                include ../../static/img/refresh.svg 
               h6 Подписание </br> соглашения 
           .blocks__button
             +button2('Подать заявку')
@@ -209,7 +214,7 @@ block page
         //- </ul>
 
         //- <div class="swipe"></div>
-        +button1('Все проекты')
+        +button1('Все проекты','/invest_projects.html')
         <script src="https://hammerjs.github.io/dist/hammer.js"></script>
       .main-block7 
         h2 НОВОСТИ

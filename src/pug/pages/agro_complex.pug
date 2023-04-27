@@ -1,0 +1,51 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+    - var title = "Инвестиционные проекты";
+
+block page
+    .main-agro
+        include ../chunk/blocks/header.pug
+        .main-blocks
+            .main-block1
+                .path 
+                    .p1 Главная
+                    .block1_block 
+                    .p1 Инвестиционные проекты
+                    .block1_block 
+                    .p1 Агропромышленный комплекс       
+                .main-block1-blocks      
+                    .blocks 
+                        a(href="/agency.html").p2 Агентство
+                    h1 Агропромышленный комплекс
+                    .p1 Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний лишь добавляют фракционных разногласий и ограничены исключительно образом мышления! Но повышение уровня гражданского сознания способствует подготовке и реализации распределения внутренних резервов и ресурсов.
+            .main-block2
+                .block2-conts 
+                    .cont1
+                        .h3
+                            h3(style="color:#FF1A1A;") 29 
+                            h3(style="color:#1D1E33;") ЕД 
+                        .p4 Количество проектов
+                    .cont2
+                        .h3
+                            h3(style="color:#FF1A1A;") 3.15 
+                            h3(style="color:#1D1E33;") МЛН ₽
+                        .p4 Стоимость проектов
+                    .cont3
+                        .h3
+                            h3(style="color:#FF1A1A;") 3.07 
+                            h3(style="color:#1D1E33;") МЛН ₽  
+                        .p4 Обьем требуемых инвестиций  
+                //.img
+            .main-block3
+                .block3-cont1
+                    .cont1-text
+                        .p1 Мегино-Кангаласский район
+                    h5 Создание сельскохозяйственного кластера в Республики  Саха (Якутия)
+                    .p4 Задача организации, в особенности же выбранный нами инновационный путь прекрасно подходит для реализации приоретизации разума над эмоциями. 
+
+
+
+        include ../chunk/blocks/footer.pug

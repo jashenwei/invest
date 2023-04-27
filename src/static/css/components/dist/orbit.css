@@ -1,0 +1,16 @@
+.orbit {
+  box-sizing: border-box;
+  width: 692px;
+  height: 571px;
+  position: relative;
+}
+
+.orbit input[type="radio"] {
+  display: none;
+}
+
+.orbit .img1 {
+  position: absolute;
+}
+
+/*# sourceMappingURL=orbit.css.map */
