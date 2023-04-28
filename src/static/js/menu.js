@@ -10,17 +10,17 @@ block.forEach(function (e, index) {
     if (e !== main) {
       e.animate({
         "paddingTop": "5px"
-      }, 500)
+      }, 400)
       e.animate({
-        "opacity": "1"
-      }, 700)
+        "opacity": "0.5"
+      }, 550)
       main.animate({
         "paddingTop": "5px"
-      }, 500)
+      }, 400)
 
       main.animate({
-        "opacity": "1"
-      }, 700)
+        "opacity": "0.5"
+      }, 550)
     }
   });
 })

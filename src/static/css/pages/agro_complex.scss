@@ -168,6 +168,17 @@
                         opacity: 1;
                         visibility: visible;
                     }
+
+                    .loc {
+                        
+
+                        svg path {
+                            transition: all .7s ease-in-out;
+                            fill: white;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
                 }
             }
 
@@ -178,23 +189,41 @@
                 flex-direction: column;
                 align-items: flex-start;
                 box-sizing: border-box;
-                padding: 30px 0 0 30px;
+                padding: 30px 30px 30px 30px;
                 gap: 15px;
                 color: #1D1E33;
                 justify-content: flex-start;
-                width: 420px;
-                height: 240px;
+                width: 640px;
+                height: 280px;
 
+                h5,
                 .p4 {
-                    width: 347px;
-                    height: 88px;
+                    width: 560px;
+
+
                 }
 
                 .cont1-text {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    width: 347px;
+                    width: 100%;
+
+                    .loc {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 8px;
+                        align-items: center;
+                        svg{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        // svg path {
+                        //     //fill: #1D1E33;
+                        //     opacity: 1;
+                        //     visibility: visible;
+                        // }
+                    }
 
                     svg {
                         opacity: 0;

@@ -534,8 +534,15 @@
             width: 80px;
             height: 80px;
             background: #F9F9F9;
+            animation: light 6s linear infinite;
 
-            svg {}
+            svg {
+              animation: fill 6s linear infinite;
+            }
+
+            svg path {
+              animation: fill 6s linear infinite;
+            }
 
           }
         }
@@ -546,7 +553,7 @@
 
           .ellipse {
             animation-delay: 0s;
-            animation: light 6.5s infinite;
+
           }
         }
 
@@ -555,8 +562,8 @@
           top: 80px;
 
           .ellipse {
-            animation-delay: 6.5s;
-            animation: light 9.0s infinite;
+            animation-delay: 1s;
+
           }
         }
 
@@ -565,8 +572,8 @@
           top: 80px;
 
           .ellipse {
-            animation-delay: 9.0s;
-            animation: light 11.5s infinite;
+            animation-delay: 2s;
+
           }
         }
 
@@ -575,8 +582,18 @@
           top: 230px;
 
           .ellipse {
-            animation-delay: 11.5s;
-            animation: light 15.5s infinite;
+            animation-delay: 3s;
+
+          }
+        }
+
+        @keyframes light {
+          0% {
+            fill: black;
+          }
+
+          100% {
+            fill: white;
           }
         }
 
@@ -585,18 +602,21 @@
             background-color: #F9F9F9;
             box-shadow: 0 0 7px #F9F9F9;
           }
+
           30% {
             background-color: #F9F9F9;
             box-shadow: 0 0 7px #FF1A1A;
           }
+
           60% {
             background-color: #FF1A1A;
             box-shadow: 0 0 13px #FF1A1A;
           }
-           80% {
-             background-color: #FF1A1A;
-             box-shadow: 0 0 6px #FF1A1A;
-           }
+
+          80% {
+            background-color: #FF1A1A;
+            box-shadow: 0 0 6px #FF1A1A;
+          }
 
           100% {
             background-color: #F9F9F9;
@@ -707,7 +727,6 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      overflow-y: hidden;
       height: 350px;
       gap: 20px;
       justify-content: center;
