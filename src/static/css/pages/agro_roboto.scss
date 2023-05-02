@@ -1,0 +1,315 @@
+.main-roboto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .main-blocks {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 80px;
+        width: 1440px;
+        height: 2103px;
+        padding: 41px 70px;
+        background: url("/img/bgndForPage1.svg"), white;
+
+        .main-block1 {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .path {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+
+                .p1 {
+                    color: #858585;
+
+                }
+
+                .block1_block {
+                    display: flex;
+                    width: 5px;
+                    height: 5px;
+                    background: #FF1A1A;
+                    transform: rotate(45deg);
+                }
+            }
+
+            .main-block1-blocks {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                h1,
+                .p2 {
+                    color: #1D1E33;
+                    text-decoration: none;
+                }
+
+                .p1 {
+                    width: 1106px;
+                    height: 75px;
+                }
+
+                .blocks {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    align-items: center;
+
+                    .border {
+                        display: flex;
+                        width: 1px;
+                        height: 15px;
+                        background: #1D1E33;
+                    }
+
+                    .p2 {
+                        border-bottom: 1px solid #1D1E33;
+                    }
+                }
+            }
+        }
+
+        .main-block2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0px;
+            gap: 26px;
+            width: 1300px;
+            height: 129px;
+            border-bottom: 1px solid #858585;
+
+            .img {
+                display: flex;
+
+                width: 1300px;
+                height: 100px;
+            }
+
+            .block2-conts {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0px;
+                gap: 377px;
+                width: 1300px;
+                height: 102px;
+
+                background: url("/img/line_chart.svg");
+
+                .cont1,
+                .cont2,
+                .cont3 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 10px;
+
+                    width: 120px;
+                    height: 102px;
+
+                    .h3 {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 8px;
+                    }
+
+                }
+
+                .cont1 {
+                    width: 120px;
+                    height: 102px;
+                }
+
+                .cont2 {
+                    width: 216px;
+                    height: 102px;
+
+                    .p4 {
+                        width: 120px;
+                        height: 44px;
+                    }
+                }
+
+                .cont3 {
+                    width: 216px;
+                    height: 102px;
+                }
+            }
+        }
+
+        .main-block3 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .sliders {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+
+                #viewport {
+                    width: 900px;
+                    height: 310px;
+                    overflow: hidden;
+
+                    .slider {
+                        position: relative;
+                        transition: 500ms;
+                        width: 1300px;
+                        height: 350px;
+                        display: flex;
+                        justify-content: start;
+                        overflow: hidden;
+                        gap: 20px;
+
+                        .slide {
+                            width: 310px !important;
+                            height: 310px;
+                            background: #1D1E33;
+                            display: block;
+                            color: white;
+                            font-size: 70px;
+                        }
+
+                        .slide.active {
+                            width: 640px !important;
+                            height: 350px !important;
+                            display: flex;
+
+                        }
+                    }
+                }
+
+                .sld {
+                    display: flex;
+                    flex-direction: row;
+                    width: 1300px;
+                    height: 350px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    .slide {
+                        width: 310px;
+                        height: 310px;
+                        display: flex;
+                        background: #1D1E33;
+                        box-sizing: border-box;
+                        padding: 30px;
+
+                        h5 {
+                            opacity: 0.5;
+                            color: #f9f9f9;
+                        }
+                    }
+
+                    .slide.active {
+                        display: flex;
+                        width: 640px;
+                        height: 350px;
+
+                        h5 {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .scroll {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 20px;
+
+                    #viewSlider {
+                        width: calc(50px * 5);
+                        display: flex;
+                        flex-direction: row;
+                        height: 2px;
+                        justify-content: space-between;
+
+                    }
+
+                    .viewSlide {
+                        width: 300px;
+                        height: 4px;
+                        background-color: #858585;
+
+                    }
+
+                    button {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+
+
+
+
+
+
+        }
+
+        .main-block4 {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .main-block5 {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+
+            .block5-cont1 {
+                width: 778px;
+            }
+
+            .block5-cont1,
+            .block5-cont2 {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .border {
+                display: flex;
+                width: 1px;
+                height: 281px;
+                background: #858585;
+            }
+        }
+    }
+
+    .but {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        .button1 {
+            width: 274px;
+
+        }
+    }
+
+}

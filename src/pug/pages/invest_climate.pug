@@ -1,0 +1,41 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+  - var title = "ИНВЕСТСТАНДАРТ";
+
+block page
+    .main-invest
+        include ../chunk/blocks/header.pug
+        .main-blocks
+            .main-block1
+                .path 
+                    .p1 Главная
+                    .block1_block 
+                    .p1 Инвестстандарт 
+                .main-block1-blocks 
+                    h1 ИНВЕСТСТАНДАРТ
+                    .blocks
+                        .p2 Инвестиционная декларация 
+                        .border 
+                        .p2 Инвестиционная карта
+                        .border 
+                        a(href="/investRules.html").p2 Свод инвестиционных правил  
+                    .blocks
+                        .p2 Инвестиционный камитет
+                        .border 
+                        a(href="/agency.html").p2 Агентство
+            .main-block2
+                .block2-cont1
+                    .block1
+                        .block1_block1
+                            .svg
+                                include ../../static/img/logo2.svg
+                    .block2 
+                        h5 «Инвестиционный климат – как вектор развития региона»
+                .block2-cont2
+                    h2 Что нужно знать об инвестстандарте
+                    .p1 Инвестиционный стандарт - это свод правил для органов исполнительной власти по обеспечению благоприятного  инвестиционного </br> климата через эффективные механизмы, законодательное регулирование и внедрение лучших практик.
+                        </br>Введен Министерством экономического развития Российской Федерации Приказом №591 от 30 сентября 2021 года " О системе </br> поддержки новых инвестиционных проектов в субъектах Российской Федерации ("Региональный инвестиционный стандарт")".
+        include ../chunk/blocks/footer.pug

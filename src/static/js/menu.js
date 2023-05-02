@@ -1,3 +1,4 @@
+//orbit
 const block = document.querySelectorAll('.main-block__block3 label')
 const main = block[2]
 
@@ -24,6 +25,80 @@ block.forEach(function (e, index) {
     }
   });
 })
+const rs = document.querySelectorAll('.block_block input[type="radio"]');
+// const b1 = document.querySelector('#b1');
+// const b2 = document.querySelector('#b2');
+// const b3 = document.querySelector('#b3');
+// const b4 = document.querySelector('#b4');
+// const b5 = document.querySelector('#b5');
+const labels = document.querySelectorAll('label input[type="radio"]');
+
+labels.forEach((label) => {
+  label.parentElement.addEventListener('click', (event) => {
+    if (event.target !== label) {
+
+      const b3Text = document.querySelector('#b3 .radio-button__label').textContent;
+      const labelText = event.currentTarget.querySelector('.radio-button__label').textContent;
+      document.querySelector('#b3 .radio-button__label').textContent = labelText;
+      event.currentTarget.querySelector('.radio-button__label').textContent = b3Text;
+
+    }
+  });
+});
+//slider
+// Получаем видимую часть слайда
+let viewport = document.getElementById("viewport").offsetWidth;
+// Получаем кнопку вперёд
+let btnNext = document.getElementById("next");
+// Получаем кнопку назад
+let btnPrev = document.getElementById("prev");
+// Получаем элемент со всеми слайдами
+let slider = document.querySelector("div.slider");
+// Получаем элементы показа слайда
+let viewSliders = document.querySelectorAll(".viewSlide");
+// Объявляем переменную номера слайда
+let viewSlide = 0;
+
+// Назначаем цвет индикатор слайда зелёный
+viewSliders[0].style.backgroundColor = "#FF1A1A";
+
+// Обработка клика на кнопку вперёд
+btnNext.addEventListener("click", function () {
+  // Делаем индикатор слайда красный
+  viewSliders[viewSlide].style.backgroundColor = "#858585";
+  // Условие, если номер слайда меньше четырёх
+  if (viewSlide < 4) { // Если верно то
+    // Увеличиваем номер слайда на один
+    viewSlide++;
+  } else { // Иначе
+    // Номер слайда равен нулю
+    viewSlide = 0;
+  }
+  // Закрашиваем индикатор слайда в зелёный
+  viewSliders[viewSlide].style.backgroundColor = "#FF1A1A";
+  // Меняем позицию всего слайда
+  slider.style.left = -viewSlide * viewport + "px";
+});
+
+// Обработка клика на кнопку назад
+btnPrev.addEventListener("click", function () {
+  // Делаем индикатор слайда красный
+  viewSliders[viewSlide].style.backgroundColor = "#858585";
+  // Условие, если номер слайда больше нуля
+  if (viewSlide > 0) { // Если верно то
+    // Уменьшаем номер слайда
+    viewSlide--;
+  } else { // Иначе
+    // Номер слайда равен четырём
+    viewSlide = 4;
+  }
+  // Закрашиваем индикатор слайда в зелёный
+  viewSliders[viewSlide].style.backgroundColor = "#FF1A1A";
+  // Меняем позицию всего слайда
+  slider.style.left = -viewSlide * viewport + "px";
+});
+
+
 
 
 //const { event } = require("jquery");
@@ -113,26 +188,7 @@ radioButtons.forEach(radioButton => {
 });
 
 
-const rs = document.querySelectorAll('.block_block input[type="radio"]');
-// const b1 = document.querySelector('#b1');
-// const b2 = document.querySelector('#b2');
-// const b3 = document.querySelector('#b3');
-// const b4 = document.querySelector('#b4');
-// const b5 = document.querySelector('#b5');
-const labels = document.querySelectorAll('label input[type="radio"]');
 
-labels.forEach((label) => {
-  label.parentElement.addEventListener('click', (event) => {
-    if (event.target !== label) {
-
-      const b3Text = document.querySelector('#b3 .radio-button__label').textContent;
-      const labelText = event.currentTarget.querySelector('.radio-button__label').textContent;
-      document.querySelector('#b3 .radio-button__label').textContent = labelText;
-      event.currentTarget.querySelector('.radio-button__label').textContent = b3Text;
-
-    }
-  });
-});
 
 // const d = document.querySelectorAll('.main-block2 .block2-cont1')
 
@@ -234,87 +290,4 @@ document.body.removeChild(scrollDiv);
 const hM = document.querySelector('.modal-content')
 hM.style.paddingLeft = scrollbarWidth + "px";
 
-//слайдер
-const $ = selector => {
-  return document.querySelector(selector);
-};
 
-function next() {
-  if ($(".hide")) {
-    $(".hide").remove();
-  }
-
-  /* Step */
-
-  if ($(".prev")) {
-    $(".prev").classList.add("hide");
-    $(".prev").classList.remove("prev");
-  }
-
-  $(".act").classList.add("prev");
-  $(".act").classList.remove("act");
-
-  $(".next").classList.add("act");
-  $(".next").classList.remove("next");
-
-  /* New Next */
-
-  $(".new-next").classList.remove("new-next");
-
-  const addedEl = document.createElement('li');
-
-  $(".list").appendChild(addedEl);
-  addedEl.classList.add("next", "new-next");
-}
-
-function prev() {
-  $(".new-next").remove();
-
-  /* Step */
-
-  $(".next").classList.add("new-next");
-
-  $(".act").classList.add("next");
-  $(".act").classList.remove("act");
-
-  $(".prev").classList.add("act");
-  $(".prev").classList.remove("prev");
-
-  /* New Prev */
-
-  $(".hide").classList.add("prev");
-  $(".hide").classList.remove("hide");
-
-  const addedEl = document.createElement('li');
-
-  $(".list").insertBefore(addedEl, $(".list").firstChild);
-  addedEl.classList.add("hide");
-}
-
-const slide = element => {
-  /* Next slide */
-
-  if (element.classList.contains('next')) {
-    next();
-
-    /* Previous slide */
-
-  } else if (element.classList.contains('prev')) {
-    prev();
-  }
-}
-
-const slider = $(".list"),
-  swipe = new Hammer($(".swipe"));
-
-slider.onclick = event => {
-  slide(event.target);
-}
-
-swipe.on("swipeleft", (ev) => {
-  next();
-});
-
-swipe.on("swiperight", (ev) => {
-  prev();
-});
