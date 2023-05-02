@@ -45,58 +45,94 @@ labels.forEach((label) => {
     }
   });
 });
+//tabs_years_info
+const menuLinkss = document.querySelectorAll('.block2_tabs .mh1');
+const menuLink = document.querySelector('.menu-link')
+// Loop through each link and add an event listener to toggle the active block
+menuLinkss.forEach(link => {
+  link.addEventListener('click', (event) => {
+
+    event.preventDefault();
+    // Get the ID of the block to show    
+    const blockId = link.getAttribute('data-block-id');
+
+    // Hide all the blocks
+    const menuBlocks = document.querySelectorAll('.block2Tabs_blocks .block2_block1');
+    menuBlocks.forEach(block => block.classList.remove('active'));
+
+    // Show the block with the matching ID
+    const blockToShow = document.querySelector(`#${blockId}`);
+    blockToShow.classList.add('active');
+
+    menuLinkss.forEach(link => link.classList.remove('active'));
+
+    // Add the "active" class to the clicked link
+    link.classList.add('active');
+  });
+
+});
+
+//snippet
+const snip = document.querySelector(".img_snip")
+const blockSnip = document.querySelector(".block2-snip")
+const imgSnip = document.querySelector(".img_snip")
+snip.addEventListener('click',()=>{
+  blockSnip.classList.toggle('active')
+  imgSnip.classList.toggle('active')
+})
+
 //slider
 // Получаем видимую часть слайда
-let viewport = document.getElementById("viewport").offsetWidth;
-// Получаем кнопку вперёд
-let btnNext = document.getElementById("next");
-// Получаем кнопку назад
-let btnPrev = document.getElementById("prev");
-// Получаем элемент со всеми слайдами
-let slider = document.querySelector("div.slider");
-// Получаем элементы показа слайда
-let viewSliders = document.querySelectorAll(".viewSlide");
-// Объявляем переменную номера слайда
-let viewSlide = 0;
+// let viewport = document.getElementById("viewport").offsetWidth;
+// // Получаем кнопку вперёд
+// let btnNext = document.getElementById("next");
+// // Получаем кнопку назад
+// let btnPrev = document.getElementById("prev");
+// // Получаем элемент со всеми слайдами
+// let slider = document.querySelector("div.slider");
+// // Получаем элементы показа слайда
+// let viewSliders = document.querySelectorAll(".viewSlide");
+// // Объявляем переменную номера слайда
+// let viewSlide = 0;
 
-// Назначаем цвет индикатор слайда зелёный
-viewSliders[0].style.backgroundColor = "#FF1A1A";
+// // Назначаем цвет индикатор слайда зелёный
+// viewSliders[0].style.backgroundColor = "#FF1A1A";
 
-// Обработка клика на кнопку вперёд
-btnNext.addEventListener("click", function () {
-  // Делаем индикатор слайда красный
-  viewSliders[viewSlide].style.backgroundColor = "#858585";
-  // Условие, если номер слайда меньше четырёх
-  if (viewSlide < 4) { // Если верно то
-    // Увеличиваем номер слайда на один
-    viewSlide++;
-  } else { // Иначе
-    // Номер слайда равен нулю
-    viewSlide = 0;
-  }
-  // Закрашиваем индикатор слайда в зелёный
-  viewSliders[viewSlide].style.backgroundColor = "#FF1A1A";
-  // Меняем позицию всего слайда
-  slider.style.left = -viewSlide * viewport + "px";
-});
+// // Обработка клика на кнопку вперёд
+// btnNext.addEventListener("click", function () {
+//   // Делаем индикатор слайда красный
+//   viewSliders[viewSlide].style.backgroundColor = "#858585";
+//   // Условие, если номер слайда меньше четырёх
+//   if (viewSlide < 4) { // Если верно то
+//     // Увеличиваем номер слайда на один
+//     viewSlide++;
+//   } else { // Иначе
+//     // Номер слайда равен нулю
+//     viewSlide = 0;
+//   }
+//   // Закрашиваем индикатор слайда в зелёный
+//   viewSliders[viewSlide].style.backgroundColor = "#FF1A1A";
+//   // Меняем позицию всего слайда
+//   slider.style.left = -viewSlide * viewport + "px";
+// });
 
-// Обработка клика на кнопку назад
-btnPrev.addEventListener("click", function () {
-  // Делаем индикатор слайда красный
-  viewSliders[viewSlide].style.backgroundColor = "#858585";
-  // Условие, если номер слайда больше нуля
-  if (viewSlide > 0) { // Если верно то
-    // Уменьшаем номер слайда
-    viewSlide--;
-  } else { // Иначе
-    // Номер слайда равен четырём
-    viewSlide = 4;
-  }
-  // Закрашиваем индикатор слайда в зелёный
-  viewSliders[viewSlide].style.backgroundColor = "#FF1A1A";
-  // Меняем позицию всего слайда
-  slider.style.left = -viewSlide * viewport + "px";
-});
+// // Обработка клика на кнопку назад
+// btnPrev.addEventListener("click", function () {
+//   // Делаем индикатор слайда красный
+//   viewSliders[viewSlide].style.backgroundColor = "#858585";
+//   // Условие, если номер слайда больше нуля
+//   if (viewSlide > 0) { // Если верно то
+//     // Уменьшаем номер слайда
+//     viewSlide--;
+//   } else { // Иначе
+//     // Номер слайда равен четырём
+//     viewSlide = 4;
+//   }
+//   // Закрашиваем индикатор слайда в зелёный
+//   viewSliders[viewSlide].style.backgroundColor = "#FF1A1A";
+//   // Меняем позицию всего слайда
+//   slider.style.left = -viewSlide * viewport + "px";
+// });
 
 
 

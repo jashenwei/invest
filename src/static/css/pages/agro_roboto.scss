@@ -164,38 +164,38 @@
                 align-items: center;
                 gap: 40px;
 
-                #viewport {
-                    width: 900px;
-                    height: 310px;
-                    overflow: hidden;
+                // #viewport {
+                //     width: 900px;
+                //     height: 310px;
+                //     overflow: hidden;
 
-                    .slider {
-                        position: relative;
-                        transition: 500ms;
-                        width: 1300px;
-                        height: 350px;
-                        display: flex;
-                        justify-content: start;
-                        overflow: hidden;
-                        gap: 20px;
+                //     .slider {
+                //         position: relative;
+                //         transition: 500ms;
+                //         width: 1300px;
+                //         height: 350px;
+                //         display: flex;
+                //         justify-content: start;
+                //         overflow: hidden;
+                //         gap: 20px;
 
-                        .slide {
-                            width: 310px !important;
-                            height: 310px;
-                            background: #1D1E33;
-                            display: block;
-                            color: white;
-                            font-size: 70px;
-                        }
+                //         .slide {
+                //             width: 310px !important;
+                //             height: 310px;
+                //             background: #1D1E33;
+                //             display: block;
+                //             color: white;
+                //             font-size: 70px;
+                //         }
 
-                        .slide.active {
-                            width: 640px !important;
-                            height: 350px !important;
-                            display: flex;
+                //         .slide.active {
+                //             width: 640px !important;
+                //             height: 350px !important;
+                //             display: flex;
 
-                        }
-                    }
-                }
+                //         }
+                //     }
+                // }
 
                 .sld {
                     display: flex;

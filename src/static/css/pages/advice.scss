@@ -1,0 +1,227 @@
+.main-advice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  .main-blocks {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+    width: 1440px;
+    height: 1101px;
+    padding: 41px 70px;
+    background: url("/img/bgndForPage1.svg"), white;
+
+    .main-block1 {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .path {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+
+        .p1 {
+          color: #858585;
+
+        }
+
+        .block1_block {
+          display: flex;
+          width: 5px;
+          height: 5px;
+          background: #FF1A1A;
+          transform: rotate(45deg);
+        }
+      }
+
+      .main-block1-blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h1,
+        .p2 {
+          color: #1D1E33;
+          text-decoration: none;
+        }
+
+        .blocks {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          align-items: center;
+
+          .border {
+            display: flex;
+            width: 1px;
+            height: 15px;
+            background: #1D1E33;
+          }
+
+          .p2 {
+            border-bottom: 1px solid #1D1E33;
+          }
+        }
+      }
+    }
+
+    .main-block2 {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+
+
+
+
+      .block2-cont1 {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 50px;
+        width: 1300px;
+        height: 33px;
+        border-top: 1px solid #858585;
+        box-sizing: border-box;
+        padding-top: 25px;
+
+        .block2-snip.active {
+          opacity: 1;
+        }
+        .img_snip {
+         
+          svg {
+            circle,
+            ellipse,
+            path{
+              transition: all 0.5s ease-in-out;
+      
+            }
+            
+          }
+        }
+        .img_snip.active {
+         
+          svg {
+            circle,
+            ellipse,
+            path{
+              stroke: #FF1A1A;
+            }
+            
+          }
+        }
+
+        .block2-snip {
+          position: absolute;
+          display: flex;
+          opacity: 0;
+          transition: all 0.5s ease-in-out;
+          flex-direction: column;
+          gap: 0;
+          top: 45px;
+          left: 2px;
+
+          .b {
+            width: 0;
+            height: 0;
+            margin-left: 6px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 13px solid #1D1E33;
+
+          }
+
+          .block {
+
+            position: relative;
+            display: flex;
+            width: 507px;
+            height: 46px;
+            justify-content: center;
+            align-items: center;
+            background: #1D1E33;
+
+            .p4 {
+              color: #F9F9F9;
+            }
+
+
+          }
+
+          .block {}
+
+
+        }
+
+        .block2_tabs {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 0px;
+          gap: 80px;
+
+          .mh1 {
+            cursor: pointer;
+            color: #858585;
+          }
+
+          .mh1:hover {
+            transition: all 0.5s ease-in-out;
+            color: #1D1E33;
+          }
+
+          .mh1.active {
+            color: #1D1E33;
+          }
+        }
+      }
+
+      .block2Tabs_blocks {
+        .block2_block1.active {
+
+          opacity: 1;
+          visibility: visible;
+          overflow: hidden;
+          height: 556px;
+        }
+
+        .block2_block1 {
+          transition: all 1s ease-in-out;
+          opacity: 0;
+          overflow: hidden;
+          visibility: hidden;
+          height: 0;
+          flex-direction: column;
+          display: flex;
+          gap: 30px;
+
+
+          .block {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            align-items: center;
+
+            .pb1 {
+              width: 1252px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
