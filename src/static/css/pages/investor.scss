@@ -1,4 +1,4 @@
-.main-aClimate {
+.main-investor {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,7 @@
     align-items: flex-start;
     gap: 80px;
     width: 1440px;
-    height: 1907px;
+    height: 1317px;
     padding: 41px 70px;
     background: url("/img/bgndForPage1.svg"), white;
 
@@ -99,7 +99,7 @@
             width: 1250px;
             height: 420px;
 
-          
+            svg:nth-child(1) {}
 
             .svg {
               display: flex;

@@ -76,10 +76,13 @@ menuLinkss.forEach(link => {
 const snip = document.querySelector(".img_snip")
 const blockSnip = document.querySelector(".block2-snip")
 const imgSnip = document.querySelector(".img_snip")
-snip.addEventListener('click',()=>{
-  blockSnip.classList.toggle('active')
-  imgSnip.classList.toggle('active')
-})
+if (snip) {
+  snip.addEventListener('click', () => {
+    blockSnip.classList.toggle('active')
+    imgSnip.classList.toggle('active')
+  })
+}
+
 
 //slider
 // Получаем видимую часть слайда
@@ -154,7 +157,19 @@ dButtons.forEach(button => {
     arrowIcon.classList.toggle('rotate-180');
   });
 });
-
+const dButtons1 = document.querySelectorAll('.dropdown-trigger1 button');
+dButtons1.forEach(button => {
+  button.addEventListener('click', (event) => {
+    console.log('go')
+    // Get dropdown menu and toggle 'is-active' class
+    const dropdownMenu = button.parentElement.nextElementSibling;
+    dropdownMenu.classList.toggle('active');
+    // Toggle 'is-active' class and rotate arrow icon
+    button.parentElement.classList.toggle('active');
+    const arrowIcon = button.querySelector('svg');
+    arrowIcon.classList.toggle('rotate-180');
+  });
+});
 
 // Get all dropdown items
 const dropdownItems = document.querySelectorAll('.dropdown-item');

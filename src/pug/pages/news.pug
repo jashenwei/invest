@@ -1,0 +1,90 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+    - var title = "Новости";
+
+block page
+    .main-news
+        include ../chunk/blocks/header.pug
+        .main-blocks
+            .main-block1
+                .path 
+                    .p6 Главная
+                    .block1_block 
+                    .p6 Медиа
+                    .block1_block 
+                    .p6 Новости       
+                .main-block1-blocks 
+                    .blocks 
+                        a(href="/media.html").p2 Медиа
+                    h1 Новости                    
+            .main-block2
+              .block2-body
+                .block2-cont 
+                  .cont1 
+                    .p5 Последние новости 
+                    .p5 28.02.2023
+                  .cont2 
+                    h5 Ученые создали новую нейросеть для помощи инвесторам
+                .block2-conts
+                  .block2-cont
+                    .mh6 28.02.2023
+                    .mh4 Новость 2
+                  .block2-cont
+                    .mh6 28.02.2023
+                    .mh4 Новость 3 
+                .block2-cont
+                  .mh6 28.02.2023
+                  .mh4 Новость 4 
+                .block2-cont
+                  .mh6 28.02.2023
+                  .mh4 Новость 5 
+                .block2-cont
+                  .mh6 28.02.2023
+                  .mh4 Новость 6 
+                .block2-cont
+                  .mh6 28.02.2023
+                  .mh4 Новость 7 
+                .block2-cont
+                  .mh6 28.02.2023
+                  .mh4 Новость 8 
+                .block2-cont
+                  .mh6 28.02.2023
+                  .mh4 Новость 9 
+                .block2-cont
+                  .mh6 28.02.2023
+                  .mh4 Новость 10 
+                .block2-cont
+                  .mh6 28.02.2023
+                  .mh4 Новость 11 
+                .block2-cont
+                  .mh6 28.02.2023
+                  .mh4 Новость 12 
+             
+                    
+                //.img
+              .pagination 
+                button 
+                  include ../../static/img/arrow_l_slider.svg
+                .links 
+                  a.active
+                    .p2(href="#") 1
+                  a
+                    .p2(href="#") 2
+                  a
+                    .p2(href="#") 3
+                  a
+                    .p2(href="#") 4
+                  a.p2(href="#") 5
+                  a.p2(href="#") 6
+                  a.p2(href="#") 7
+                  a.p2(href="#") 8
+                button 
+                  include ../../static/img/arrow_r_slider.svg
+            .main-block3
+
+            
+                
+        include ../chunk/blocks/footer.pug
