@@ -1,0 +1,130 @@
+.main-straight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  .main-blocks {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+    width: 1440px;
+    height: 1957px;
+    padding: 41px 70px;
+    background: url("/img/bgndForPage1.svg"), white;
+
+    .main-block1 {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .path {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+
+        .p6 {
+          color: #858585;
+
+        }
+
+        .block1_block {
+          display: flex;
+          width: 5px;
+          height: 5px;
+          background: #FF1A1A;
+          transform: rotate(45deg);
+        }
+      }
+
+      .main-block1-blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h1,
+        .p2 {
+          color: #1D1E33;
+          text-decoration: none;
+        }
+
+        .p1 {
+          width: 1106px;
+          height: 75px;
+        }
+
+        .blocks {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          align-items: center;
+
+          .border {
+            display: flex;
+            width: 1px;
+            height: 15px;
+            background: #1D1E33;
+          }
+
+          .p2 {
+            border-bottom: 1px solid #1D1E33;
+          }
+        }
+      }
+    }
+
+    .main-block2 {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+
+      .block2-conts {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+
+        .block2-cont1 {
+          display: flex;
+          flex-direction: column;
+          gap: 27px;
+        }
+
+        .block2-cont2 {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          align-items: flex-end;
+          width: 100%;
+          .border {
+            width: 958px;
+            height: 1px;
+            background: #858585;
+          }
+          .name{
+            display: flex;
+            flex-direction: column;
+           
+            
+            gap: 10px;
+            h6{
+              color:#1D1E33;
+            }
+          }
+        }
+      }
+    }
+    .main-block3{
+      h4{
+        text-transform: none;
+        a{
+          color:#004CA6;
+        }
+      }
+    }
+  }
+}

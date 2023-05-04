@@ -225,15 +225,15 @@ radioButtons.forEach(radioButton => {
       const label = rb.closest('.radio-button').querySelector('.radio-button__label');
       const custom = rb.closest('.radio-button').querySelector('.radio-button__custom');
 
-      if (rb.checked) {
-        label.style.fontSize = '18px';
-        custom.style.borderColor = '#f00';
-        custom.style.background = '#f00';
-      } else {
-        label.style.fontSize = '16px';
-        custom.style.borderColor = '#444';
-        custom.style.backgroundColor = 'transparent';
-      }
+      // if (rb.checked) {
+      //   label.style.fontSize = '18px';
+      //   custom.style.borderColor = '#f00';
+      //   custom.style.background = '#f00';
+      // } else {
+      //   label.style.fontSize = '16px';
+      //   custom.style.borderColor = '#444';
+      //   custom.style.backgroundColor = 'transparent';
+      // }
     });
   });
 });
@@ -304,7 +304,23 @@ openModalButton.forEach(but => {
     })
   });
 })
+//модальное окно для обратной связи
+const openModalButton1 = document.querySelectorAll('.open-modal1');
+const closeModalButton2 = document.querySelectorAll('.close-modal');
+const modal2 = document.querySelectorAll('.container-modalMenu2');
 
+openModalButton1.forEach(but => {
+  but.addEventListener('click', () => {
+    modal2.forEach(m => {
+      m.style.display = 'flex';
+      closeModalButton2.forEach(c => {
+        c.addEventListener('click', () => {
+          m.style.display = 'none';
+        });
+      })
+    })
+  });
+})
 const buts = document.querySelectorAll('.langsButton');
 const langs = document.querySelectorAll('.langs');
 buts.forEach(but => {

@@ -1,0 +1,59 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+    - var title = "Прямая линия с Главой Республики Саха (Якутия)";
+
+block page
+    .main-straight
+        include ../chunk/blocks/header.pug
+        .main-blocks
+            .main-block1
+                .path 
+                    .p6 Главная
+                    .block1_block 
+                    .p6 Обратная связь
+                    .block1_block 
+                    .p6 Прямая линия с Главой Республики Саха (Якутия)      
+                .main-block1-blocks 
+                    .blocks 
+                        a(href="/feedback.html").p2 Обратная связь
+                    h1 Прямая линия с главой республики Саха (якутия)                    
+            .main-block2
+              .img 
+                include ../../static/img/photo.svg
+              .block2-conts
+                .block2-cont1
+                  h2 ДОРОГИЕ ДРУЗЬЯ!
+                  .p1 Республика Саха (Якутия) обладает уникальными инвестиционными возможностями. Это связано с наличием богатейших запасов природных ресурсов, стабильной социальной и демографической ситуацией, высоким уровнем человеческого капитала и сильными экономическими позициями в Дальневосточном федеральном округе. Стимулирование инвестиционной активности и формирование комфортного инвестиционного климата будут безусловными приоритетами экономической политики республики.
+                      </br> Мы открыты к продуктивному сотрудничеству и искренне рады видеть Вас в числе наших деловых партнеров!
+                .block2-cont2 
+                  .border 
+                  .name
+                    h6 Николаев Айсен Сергеевич
+                    .p4 Глава Республики Саха (Якутия)
+            .main-block3 
+              h4 С Регламентом работы по рассмотрению обращений можно ознакомиться <a href="#">здесь</a>
+            .main-block4 
+              .block4-conts1
+                .conts1-cont1 
+                  h4 Пожалуйста, оставьте свое сообщение в форме
+                  .p1 Срок ответа на ваш запрос составляет 10 рабочих дней
+                .conts1-cont2 
+                    .input 
+                      .p1 ФИО <div style="color:#FF1A1A;">*</div>*
+                      input.input_body(value="Иванов Иван Иванович")
+                    .input 
+                      .p1 E-mail <div style="color:#FF1A1A;">*</div>
+                      input.input_body(value="Password123412@gmail.com")
+                    .placeholder 
+                      .p1 Ваше сообщение <div style="color:#FF1A1A;">*</div>*
+                      placeholder.input_body(value="Иванов Иван Иванович")
+                    .file 
+                      .p1 Прикрепить файл
+                      placeholder.input_body(value="Иванов Иван Иванович")
+              .border
+              .block4-conts2
+                
+        include ../chunk/blocks/footer.pug

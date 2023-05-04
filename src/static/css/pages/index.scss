@@ -864,6 +864,34 @@
       color: $color2;
     }
 
+    button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 35px  13px 35px;
+      box-sizing: border-box;
+      gap: 10px;
+      width: 260px;
+      height: 48px;
+      border: 1px solid #FF1A1A;
+      background: none;
+      cursor: pointer;
+      
+      .p5{
+        color:#FF1A1A;
+        white-space: nowrap;
+      }
+    }
+    button:hover{
+      transition: all 0.5s ease-in-out;
+      background: #FF1A1A;
+      .p5{
+        color:white;
+      }
+      
+    }
+
     .button1 {
       width: 260px;
     }
@@ -892,7 +920,10 @@
     .button1 {
       width: 253px;
       border: 1px solid #F9F9F9;
-      color: #F9F9F9
+
+      .p5 {
+        color: #F9F9F9 !important;
+      }
     }
 
     .button1:hover {

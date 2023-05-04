@@ -127,7 +127,10 @@ header {
         visibility: hidden;
         transition: opacity 0.6s ease, visibility 0s linear 0s;
       }
-
+      a:hover {
+        color: $colorForHover;
+        transition: all 0.4s;
+      }
       .header-container-block__links {
         display: flex;
         flex-direction: row;

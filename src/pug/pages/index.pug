@@ -245,7 +245,12 @@ block page
         .title 
           h2 ОБРАТНАЯ СВЯЗЬ
           h6 Свяжитесь с нами
-        +button1('Отправить сообщение')
+        .open-modal1
+          button 
+          
+            .p5 Отправить сообщение
+          
+      include ../chunk/components/modalFeedback.pug
       .main-block9 
         .title 
           h2 ГОС УСЛУГИ
@@ -253,5 +258,6 @@ block page
         +button1('Написать о проблеме')
       .main-block10 
         +button1('Направить обращение в аппарат полномочного представителя Президента РФ в ДФО')
+    
     include ../chunk/blocks/footer.pug
 

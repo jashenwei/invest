@@ -10,8 +10,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 1;
-
+  z-index: 14324;
 }
 
 .modal-content {
@@ -111,6 +110,9 @@
             width: 364px;
             h6{
               color:$color2;
+            }
+            h6:hover{
+              color:#FF1A1A;
             }
             .p4{
               color: $color2;

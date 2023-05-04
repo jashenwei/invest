@@ -1,0 +1,56 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+    - var title = "Пресс-центр";
+
+block page
+    .main-press
+        include ../chunk/blocks/header.pug
+        .main-blocks
+            .main-block1
+                .path 
+                    .p6 Главная
+                    .block1_block 
+                    .p6 Медиа
+                    .block1_block 
+                    .p6 Пресс-центр       
+                .main-block1-blocks 
+                    .blocks 
+                        a(href="/media.html").p2 Медиа
+                    h1 Пресс-центр
+                    .p1 По вопросам вы можете связаться с нами любыми способами                     
+            .main-block2
+              h4 Наш адрес
+              .block2-contacts
+                .block2-cont1
+                  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7915f6d476a77cc74d34338570dd9320e0d1dc55050a9e6033f7a42b8ec6e846&amp;source=constructor" width="770" height="450" frameborder="0"></iframe>
+                .border 
+                .block2-cont2 
+                  .cont2-body 
+                    h4 Наши контакты
+                    .body_block
+                      include ../../static/img/Phone.svg
+                      .p1 +7 (4112) 40-20-42
+                    .body_block
+                      include ../../static/img/mail2.svg
+                      .p1 info@investyakutia.com
+                  .cont2-body 
+                    h4 Наши Социальные сети
+                    .body_blocks
+                      a.body_block(href="#")
+                        include ../../static/img/vk_grey.svg
+                        .p1 vk.com
+                      a.body_block(href="#")
+                        include ../../static/img/od_grey.svg
+                        .p1 ok.ru
+                      a.body_block(href="#")
+                        include ../../static/img/tg_grey.svg
+                        .p1 t.me                     
+              .block_adress
+                .p1 Республика Саха (Якутия) 677000, г. Якутск, ул. Орджоникидзе, д. 36/1, этаж 5, оф. 503
+            .main-block3 
+              h4 Вы можете задать интересующий вас вопрос 
+              +button1('Связаться с нами')
+        include ../chunk/blocks/footer.pug
