@@ -3,60 +3,93 @@ include ../chunk/components/button2.pug
 include ../chunk/components/button1.pug
 block styles
 block vars
-    - var title = "Прямая линия с Главой Республики Саха (Якутия)";
+  - var title = "Прямая линия с Главой Республики Саха (Якутия)";
 
 block page
-    .main-straight
-        include ../chunk/blocks/header.pug
-        .main-blocks
-            .main-block1
-                .path 
-                    .p6 Главная
-                    .block1_block 
-                    .p6 Обратная связь
-                    .block1_block 
-                    .p6 Прямая линия с Главой Республики Саха (Якутия)      
-                .main-block1-blocks 
-                    .blocks 
-                        a(href="/feedback.html").p2 Обратная связь
-                    h1 Прямая линия с главой республики Саха (якутия)                    
-            .main-block2
-              .img 
-                include ../../static/img/photo.svg
-              .block2-conts
-                .block2-cont1
-                  h2 ДОРОГИЕ ДРУЗЬЯ!
-                  .p1 Республика Саха (Якутия) обладает уникальными инвестиционными возможностями. Это связано с наличием богатейших запасов природных ресурсов, стабильной социальной и демографической ситуацией, высоким уровнем человеческого капитала и сильными экономическими позициями в Дальневосточном федеральном округе. Стимулирование инвестиционной активности и формирование комфортного инвестиционного климата будут безусловными приоритетами экономической политики республики.
-                      </br> Мы открыты к продуктивному сотрудничеству и искренне рады видеть Вас в числе наших деловых партнеров!
-                .block2-cont2 
-                  .border 
-                  .name
-                    h6 Николаев Айсен Сергеевич
-                    .p4 Глава Республики Саха (Якутия)
-            .main-block3 
-              h4 С Регламентом работы по рассмотрению обращений можно ознакомиться <a href="#">здесь</a>
-            .main-block4 
-              .block4-conts1
-                .conts1-cont1 
-                  h4 Пожалуйста, оставьте свое сообщение в форме
-                  .p1 Срок ответа на ваш запрос составляет 10 рабочих дней
-                .conts1-cont2 
-                    .input 
-                      .p1 ФИО <div style="color:#FF1A1A;">*</div>*
-                      input.input_body(value="Иванов Иван Иванович")
-                    .input 
-                      .p1 E-mail <div style="color:#FF1A1A;">*</div>
-                      input.input_body(value="Password123412@gmail.com")
-                    .placeholder 
-                      .p1 Ваше сообщение <div style="color:#FF1A1A;">*</div>*
-                      placeholder.input_body(value="Иванов Иван Иванович")
-                    .file 
-                      .p1 Прикрепить файл   
-                      label.input_body
-                        .p1 Прикрепить файл
-                        .img 
-                          include ../../static/img/paper.svg
-              .border
-              .block4-conts2
-                
-        include ../chunk/blocks/footer.pug
+  .main-straight
+    include ../chunk/blocks/header.pug
+    .main-blocks
+      .main-block1
+        .path 
+          .p6 Главная
+          .block1_block 
+          .p6 Обратная связь
+          .block1_block 
+          .p6 Прямая линия с Главой Республики Саха (Якутия)      
+        .main-block1-blocks 
+          .blocks 
+            a(href="/feedback.html").p2 Обратная связь
+          h1 Прямая линия с главой республики Саха (якутия)                    
+      .main-block2
+        .img 
+          include ../../static/img/photo.svg
+        .block2-conts
+          .block2-cont1
+            h2 ДОРОГИЕ ДРУЗЬЯ!
+            .p1 Республика Саха (Якутия) обладает уникальными инвестиционными возможностями. Это связано с наличием богатейших запасов природных ресурсов, стабильной социальной и демографической ситуацией, высоким уровнем человеческого капитала и сильными экономическими позициями в Дальневосточном федеральном округе. Стимулирование инвестиционной активности и формирование комфортного инвестиционного климата будут безусловными приоритетами экономической политики республики.
+              </br> Мы открыты к продуктивному сотрудничеству и искренне рады видеть Вас в числе наших деловых партнеров!
+          .block2-cont2 
+            .border 
+            .name
+              h6 Николаев Айсен Сергеевич
+              .p4 Глава Республики Саха (Якутия)
+      .main-block3 
+        h4 С Регламентом работы по рассмотрению обращений можно ознакомиться <a href="#">здесь</a>
+      .main-block4 
+        .block4-conts1
+          .conts1-cont1 
+            h4 Пожалуйста, оставьте свое сообщение в форме
+            .p1 Срок ответа на ваш запрос составляет 10 рабочих дней
+          .conts1-cont2 
+            .input 
+              .p1 ФИО <div style="color:#FF1A1A;">*</div>
+              input.input_body(placeholder="Иванов Иван Иванович" required)
+            .input 
+              .p1 E-mail <div style="color:#FF1A1A;">*</div>
+              input.input_body(placeholder="Password123412@gmail.com" required)
+            .textarea 
+              .p1 Ваше сообщение <div style="color:#FF1A1A;">*</div>
+              textarea(name="" cols="30" rows="10").textarea_body(placeholder="Введите сообщение" required)
+            .supports__files__container__block
+
+            .file 
+              .p1 Прикрепить файл
+              label.file_body   
+                input(type='file' id='file-input' accept='.txt, .pdf, .doc, .docx' onchange='handleFileUpload(this)')
+                label(for='file-input').l 
+                  .p1 Прикрепить файл
+                span(class="js-value1")
+                .img 
+                  include ../../static/img/paper.svg
+              //label.file_body
+                .p1 Прикрепить файл
+                .img 
+                  include ../../static/img/paper.svg
+            .checkbox 
+              .checkbox_cont
+                input(type="checkbox" id="checkbox_t")
+                label.checkbox_body(for="checkbox_t")
+                  .check
+              .p1 Даю согласие на обработку персональных данных*
+            .dang 
+              .p4 <div style="color:#FF1A1A;">*</div>обязательно для заполнения
+            +button1('Отправить')
+        .border
+        .block4-conts2
+          h4 Социальные сети Главы Республики Саха (Якутия)
+
+          .cont1-body 
+            a(href="https://vk.com/aisennikolaev14") 
+              include ../../static/img/vk_grey.svg
+              .p1 vk.com/aisennikolaev14
+            a(href="https://ok.ru/aisen.nikolaev") 
+              include ../../static/img/od_grey.svg
+              .p1 ok.ru/aisen.nikolaev
+            a(href="https://t.me/aisen_nikolaev") 
+              include ../../static/img/tg_grey.svg
+              .p1 t.me/aisen_nikolaev
+
+
+
+
+    include ../chunk/blocks/footer.pug

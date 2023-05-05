@@ -1,3 +1,5 @@
+//const { event } = require("jquery");
+
 //orbit
 const block = document.querySelectorAll('.main-block__block3 label')
 const main = block[2]
@@ -358,3 +360,64 @@ const hM = document.querySelector('.modal-content')
 hM.style.paddingLeft = scrollbarWidth + "px";
 
 
+function handleFileUpload(input) {
+  const fileName = input.files[0].name;
+  const spanElement = input.parentElement.querySelector('.js-value1');
+  spanElement.textContent = fileName;
+  const label = document.querySelector('.file .l')
+  label.style.display = "none";
+}
+
+// function check(label){
+//   const c = label.querySelector('.check')
+//   console.log('dasda')
+//   c.classList.toggle("active") 
+// }
+const checkboxses = document.querySelectorAll('.checkbox_conts .checkbox_cont1')
+//const
+
+const ch1 =  document.querySelector('#checkbox_t1')
+
+checkboxses.forEach(c=>{
+  c.addEventListener('click',(event)=>{
+    const ch1 =  c.querySelector('#t1')
+    const ch2 = c.querySelector('#checkbox_t2')
+    const v = c.querySelector('.checkbox_body .check')
+    event.preventDefault();
+    
+    v.classList.toggle("active")
+    
+  })
+})
+
+const checkbox = document.querySelectorAll('.checkbox_cont')
+checkbox.forEach(c => {
+  c.addEventListener('click', (event) => {
+
+
+    const v = c.querySelector('.checkbox_body .check')
+    event.preventDefault();
+    v.classList.toggle("active")
+
+  })
+
+})
+document.addEventListener("DOMContentLoaded", function () {
+  var phoneInput = document.getElementById("phone");
+  var cardInput = document.getElementById("card");
+  var emailInput = document.getElementById("email");
+  var moneyInput = document.getElementById("money");
+
+  if (phoneInput !== null) {
+    Inputmask({ "mask": "+7(999)-999-99-99" }).mask(phoneInput);
+  }
+  if (cardInput !== null) {
+    Inputmask({ "mask": "9999 9999 9999 9999" }).mask(cardInput);
+  }
+  if (emailInput !== null) {
+    Inputmask({ "alias": "" }).mask(emailInput);
+  }
+  if (moneyInput !== null) {
+    Inputmask({ "alias": "numeric" }).mask(moneyInput);
+  }
+});

@@ -1,0 +1,151 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+  - var title = "Свяжитесь с нами";
+
+block page
+  .main-contactUs
+    include ../chunk/blocks/header.pug
+    .main-blocks
+      .main-block1
+        .path 
+          .p6 Главная
+          .block1_block 
+          .p6 Обратная связь
+          .block1_block 
+          .p6 Свяжитесь с нами      
+        .main-block1-blocks 
+          .blocks 
+            a(href="/feedback.html").p2 Обратная связь
+          h1 Свяжитесь с нами                   
+      .main-block2
+        h2 УВАЖАЕМЫЕ ПРЕДПРИНИМАТЕЛИ!
+        .p1 В целях оперативного решения проблем и вопросов, возникающих в процессе инвестиционной деятельности, Вы всегда можете </br> обратиться к нам через Инвестиционный портал InvestYakutia.com
+      .main-block3 
+        h4 Порядок обращения
+        .instuction 
+          .i-blocks1 
+            .i-block1 
+              .head
+                .title_block
+                  p 1
+                h6 Заполнение формы
+            .border1
+            .i-block2
+
+              .head
+                .title_block
+                  p 2
+                .block
+                  h6 Регистрация обращения
+                  .body               
+                    .p1 В течении 1 рабочего дня с момента поступления обращения
+            .border2
+            .i-block3 
+              .head
+                .title_block
+                  p 3
+                  //.border3
+                .block
+                  h6 Анализ обращения 
+                  .body               
+                    .p1 В течении 1 рабочего дня с момента поступления обращения              
+                    .li
+                      li.p4 Проверка на комплектность 
+                      li.p4 Оформление
+                      li.p4 Полноту информации
+          .border_main 
+            include ../../static/img/v.svg 
+          //.border4
+            .borders
+              .border5 
+              .border6 
+          .i-blocks2 
+            .i-block1 
+              .head
+                .title_block
+                  p 4.1
+                .block
+                  h6 Обращение в компетенции Агентства
+                  .body 
+                    .p1 Ответ в течении 10 рабочих дней
+            .i-block2 
+              .head
+                .title_block
+                  p 4.2
+                .block1
+                  h6 Обращение в компетенции вне Агентства
+                  .body2
+                    .body_item 
+                      h6 Направление обраения в ответственный орган
+                      .p1 Ответ в соответсвии с установленным и сроками
+                    .body_item
+                      h6 Уведомление Заявителя о переадресации обращения 
+                .border_main1
+                  include ../../static/img/v1.svg
+      .main-block4 
+        .block4-conts1
+          .conts1-cont1 
+            h4 Вы можете задать интересующий </br> Вас вопрос просто заполнив форму
+            .p1 Наш менеджер свяжется с Вами в течение одного рабочего дня
+          form.conts1-cont2 
+            .input 
+              .p1 ФИО <div style="color:#FF1A1A;">*</div>
+              input.input_body(placeholder="Иванов Иван Иванович" required)
+            .input 
+              .p1 Компания
+              input.input_body(placeholder="Например: Apple")
+            .input 
+              .p1 Телефон
+              input#phone.input_body(placeholder="Например: +7(999)-123-23-32")
+            .input 
+              .p1 E-mail <div style="color:#FF1A1A;">*</div>
+              input.input_body(placeholder="Например: Password123412@gmail.com" required)
+            .textarea 
+              .p1 Ваше сообщение <div style="color:#FF1A1A;">*</div>
+              textarea(name="" cols="30" rows="10").textarea_body(placeholder="Введите сообщение" required)
+            .supports__files__container__block
+
+            .file 
+              .p1 Прикрепить файл
+              label.file_body   
+                input(type='file' id='file-input' accept='.txt, .pdf, .doc, .docx' onchange='handleFileUpload(this)')
+                label(for='file-input').l 
+                  .p1 Прикрепить файл
+                span(class="js-value1")
+                .img 
+                  include ../../static/img/paper.svg
+              //label.file_body
+                .p1 Прикрепить файл
+                .img 
+                  include ../../static/img/paper.svg
+            .checkbox 
+              .checkbox_cont
+                input(type="checkbox" id="checkbox_t")
+                label.checkbox_body(for="checkbox_t")
+                  .check
+              .p1 Даю согласие на обработку персональных данных*
+            .dang 
+              .p4 <div style="color:#FF1A1A;">*</div>обязательно для заполнения
+            +button1('Отправить')
+        .border
+        .block4-conts2
+          h4 Социальные сети Главы Республики Саха (Якутия)
+
+          .cont1-body 
+            a(href="#") 
+              include ../../static/img/vk_grey.svg
+              .p1 vk.com
+            a(href="#") 
+              include ../../static/img/od_grey.svg
+              .p1 ok.ru
+            a(href="#") 
+              include ../../static/img/tg_grey.svg
+              .p1 t.me
+
+
+
+
+    include ../chunk/blocks/footer.pug

@@ -1,0 +1,128 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+  - var title = "Оcтавить отзыв";
+
+block page
+  .main-leaveF
+    include ../chunk/blocks/header.pug
+    .main-blocks
+      .main-block1
+        .path 
+          .p6 Главная
+          .block1_block 
+          .p6 Страница
+          .block1_block 
+          .p6 Страница 1     
+        .main-block1-blocks 
+          .blocks 
+            a(href="/feedback.html").p2 Обратная связь
+          h1 ОСТАВИТЬ ОТЗЫВ              
+      .main-block4 
+        .block4-conts1
+          .conts1-cont1 
+            h4 Вы можете оставть отзыв просто заполнив форму
+            .p1 Наш менеджер свяжется с Вами в течение одного рабочего дня
+            
+          form.conts1-cont2 
+            .input 
+              .p1 ФИО <div style="color:#FF1A1A;">*</div>
+              input.input_body(placeholder="Иванов Иван Иванович" required)
+            .checkbox_conts
+              h5 Удовлетворены ли Вы полученной услугой?
+              .conts 
+                
+                .checkbox 
+                  .checkbox_cont1
+                    input(type="checkbox" id="checkbox_t1")
+                    label.checkbox_body(for="checkbox_t1")
+                      .check
+                  .p1 Да
+                .checkbox 
+                  .checkbox_cont1
+                    input(type="checkbox" id="checkbox_t2")
+                    label.checkbox_body(for="checkbox_t2")#t2
+                      .check
+                  .p1 Нет
+              .p1 Если “Нет” то опишите пожалуйста проблему
+              input.input_body(placeholder="Комментарий")
+            .checkbox_conts
+              h5 Нашли ли Вы ответы на все интересующие вопросы?
+              .conts 
+                .checkbox 
+                  .checkbox_cont1
+                    input(type="checkbox" id="checkbox_t1")
+                    label.checkbox_body(for="checkbox_t")
+                      .check
+                  .p1 Да
+                .checkbox 
+                  .checkbox_cont1
+                    input(type="checkbox" id="checkbox_t")
+                    label.checkbox_body(for="checkbox_t")
+                      .check
+                  .p1 Нет
+              .p1 Если “Нет” то какой  вопрос не смогли найти ответ?
+              input.input_body(placeholder="Комментарий")
+            .checkbox_conts
+              h5 Что необходимо дополнить в работе агентства
+              input.input_body(placeholder="Комментарий")
+            .checkbox_conts
+              .p1 Понятно ли изъясняется сотрудник Агентства?
+              .conts 
+                .checkbox 
+                  .checkbox_cont1
+                    input(type="checkbox" id="checkbox_t")
+                    label.checkbox_body(for="checkbox_t")
+                      .check
+                  .p1 Да
+                .checkbox 
+                  .checkbox_cont1
+                    input(type="checkbox" id="checkbox_t")
+                    label.checkbox_body(for="checkbox_t")
+                      .check
+                  .p1 Нет
+            .checkbox_conts
+              .p1 Вежлив ли с Вами сотрудник Агентства?
+              .conts 
+                .checkbox 
+                  .checkbox_cont1
+                    input(type="checkbox" id="checkbox_t")
+                    label.checkbox_body(for="checkbox_t")
+                      .check
+                  .p1 Да
+                .checkbox 
+                  .checkbox_cont1
+                    input(type="checkbox" id="checkbox_t")
+                    label.checkbox_body(for="checkbox_t")
+                      .check
+                  .p1 Нет
+            .textarea 
+              .p1 Ваши пожелания <div style="color:#FF1A1A;">*</div>
+              textarea(name="" cols="30" rows="10").textarea_body(placeholder="Введите сообщение" required)
+            .checkbox 
+              .checkbox_cont
+                input(type="checkbox" id="checkbox_t")
+                label.checkbox_body(for="checkbox_t")
+                  .check
+              .p1 Даю согласие на обработку персональных данных*
+            .dang 
+              .p4 <div style="color:#FF1A1A;">*</div>обязательно для заполнения
+            +button1('Отправить')
+        .border
+        .block4-conts2
+          h4 Социальные сети Главы Республики Саха (Якутия)
+
+          .cont1-body 
+            a(href="#") 
+              include ../../static/img/vk_grey.svg
+              .p1 vk.com
+            a(href="#") 
+              include ../../static/img/od_grey.svg
+              .p1 ok.ru
+            a(href="#") 
+              include ../../static/img/tg_grey.svg
+              .p1 t.me
+      
+    include ../chunk/blocks/footer.pug

@@ -31,6 +31,9 @@
 @import './components/modalFeedback.scss';
 @import './pages/feedback.scss';
 @import './pages/straight_line.scss';
+@import './pages/contact_us.scss';
+@import './pages/static_web.scss';
+@import './pages/leave_feedback.scss';
 
 //@import './components/orbit.scss';
 
@@ -194,7 +197,7 @@ h4 {
   font-size: 28px;
   line-height: 140%;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
+  //text-transform: uppercase;
 
   @include mobile {
     font-size: 20px;
