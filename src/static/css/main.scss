@@ -34,6 +34,9 @@
 @import './pages/contact_us.scss';
 @import './pages/static_web.scss';
 @import './pages/leave_feedback.scss';
+@import './components/modalProject.scss';
+@import './pages/respond_project.scss';
+@import './pages/search_page.scss';
 
 //@import './components/orbit.scss';
 
@@ -236,6 +239,8 @@ h6 {
   color: #FFFFFF;
 
   @include mobile {
+    font-family: $gilroyRegular;
+    font-weight: 500;
     font-size: 16px;
     line-height: 120%;
     letter-spacing: 0.04em;

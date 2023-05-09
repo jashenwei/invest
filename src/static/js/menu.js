@@ -310,6 +310,7 @@ openModalButton.forEach(but => {
 const openModalButton1 = document.querySelectorAll('.open-modal1');
 const closeModalButton2 = document.querySelectorAll('.close-modal');
 const modal2 = document.querySelectorAll('.container-modalMenu2');
+const modal3 = document.querySelectorAll('.container-modalMenu3');
 
 openModalButton1.forEach(but => {
   but.addEventListener('click', () => {
@@ -321,8 +322,18 @@ openModalButton1.forEach(but => {
         });
       })
     })
+    modal3.forEach(m => {
+      m.style.display = 'flex';
+      closeModalButton2.forEach(c => {
+        c.addEventListener('click', () => {
+          m.style.display = 'none';
+        });
+      })
+    })
   });
 })
+
+
 const buts = document.querySelectorAll('.langsButton');
 const langs = document.querySelectorAll('.langs');
 buts.forEach(but => {
@@ -357,43 +368,57 @@ document.body.removeChild(scrollDiv);
 
 
 const hM = document.querySelector('.modal-content')
-hM.style.paddingLeft = scrollbarWidth + "px";
+//hM.style.paddingLeft = scrollbarWidth + "px";
 
 
 function handleFileUpload(input) {
   const fileName = input.files[0].name;
-  const spanElement = input.parentElement.querySelector('.js-value1');
-  spanElement.textContent = fileName;
-  const label = document.querySelector('.file .l')
-  label.style.display = "none";
-}
-
-// function check(label){
-//   const c = label.querySelector('.check')
-//   console.log('dasda')
-//   c.classList.toggle("active") 
-// }
-const checkboxses = document.querySelectorAll('.checkbox_conts .checkbox_cont1')
-//const
-
-const ch1 =  document.querySelector('#checkbox_t1')
-
-checkboxses.forEach(c=>{
-  c.addEventListener('click',(event)=>{
-    const ch1 =  c.querySelector('#t1')
-    const ch2 = c.querySelector('#checkbox_t2')
-    const v = c.querySelector('.checkbox_body .check')
-    event.preventDefault();
-    
-    v.classList.toggle("active")
+  const spanElement = input.parentElement.querySelectorAll('.js-value1');
+  spanElement.forEach(s => {
+    s.textContent = fileName;
+    const label = input.nextElementSibling;
+   
+      label.style.display = "none";
     
   })
+
+}
+
+const check = document.querySelectorAll('.conts')
+check.forEach(conts => {
+  const checkboxses = conts.querySelectorAll('.checkbox_conts .checkbox_cont1 input')
+  //const
+  checkboxses.forEach(c => {
+    c.addEventListener('change', () => {
+      const checked = c.checked;
+
+      checkboxses.forEach((h) => {
+        if (h != c) {
+          h.checked = false;
+
+          const label = h.parentElement.querySelector('.checkbox_body');
+          const check = label.querySelector('.check');
+          check.classList.remove('active');
+        }
+      });
+
+      const label = c.parentElement.querySelector('.checkbox .checkbox_body');
+      const check = label.querySelector('.check');
+
+      if (checked) {
+        check.classList.add('active');
+      } else {
+        check.classList.remove('active');
+      }
+    })
+
+  })
 })
+
 
 const checkbox = document.querySelectorAll('.checkbox_cont')
 checkbox.forEach(c => {
   c.addEventListener('click', (event) => {
-
 
     const v = c.querySelector('.checkbox_body .check')
     event.preventDefault();
@@ -409,15 +434,23 @@ document.addEventListener("DOMContentLoaded", function () {
   var moneyInput = document.getElementById("money");
 
   if (phoneInput !== null) {
-    Inputmask({ "mask": "+7(999)-999-99-99" }).mask(phoneInput);
+    Inputmask({
+      "mask": "+7(999)-999-99-99"
+    }).mask(phoneInput);
   }
   if (cardInput !== null) {
-    Inputmask({ "mask": "9999 9999 9999 9999" }).mask(cardInput);
+    Inputmask({
+      "mask": "9999 9999 9999 9999"
+    }).mask(cardInput);
   }
   if (emailInput !== null) {
-    Inputmask({ "alias": "" }).mask(emailInput);
+    Inputmask({
+      "alias": ""
+    }).mask(emailInput);
   }
   if (moneyInput !== null) {
-    Inputmask({ "alias": "numeric" }).mask(moneyInput);
+    Inputmask({
+      "alias": "numeric"
+    }).mask(moneyInput);
   }
 });

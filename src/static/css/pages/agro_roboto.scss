@@ -306,9 +306,37 @@
         justify-content: center;
         width: 100%;
         align-items: center;
-        .button1 {
+        
+        button {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             width: 274px;
+            height: 48px;
+            border: 1px solid #FF1A1A;
+            background: none;
+            color: #FF1A1A !important;
+            padding: 13px 35px;
+            white-space: nowrap;
 
+        }
+
+        button>a {
+            color: #FF1A1A !important;
+        }
+
+        button:hover>a {
+            color: white !important;
+        }
+
+        button:hover {
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+            background: #FF1A1A;
+            color: white !important;
         }
     }
 

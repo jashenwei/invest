@@ -3,34 +3,34 @@ include ../chunk/components/button2.pug
 include ../chunk/components/button1.pug
 block styles
 block vars
-    - var title = "Обратная связь";
+  - var title = "Обратная связь";
 
 block page
-    .main-feedback
-        include ../chunk/blocks/header.pug
-        .main-blocks
-            .main-block1
-                .path 
-                    .p6 Главная
-                    .block1_block 
-                    .p6 Обратная свящь       
-                .main-block1-blocks 
-                    h1 Обратная связь
-                    .blocks 
-                        a(href="#").p2 Прямая линия с главой Республики Саха (Якутия)
-                        .border
-                        a(href="/news.html").p2 Свяжитесь с нами
-            .main-block2
-              .p1 На инвестиционный климат влияют различные факторы: бедность, преступность, инфраструктура, участие рабочей силы, национальная безопасность, политическая нестабильность, неопределённость режима, налоги, верховенство закона, имущественные права, правительственные постановления, прозрачность правительства и подотчётность правительства и другие.
-              .block2-links 
-                a(href="/straight_line.html") 
-                  .p1 Прямая линия c главой Республики Саха (Якутия)
-                a(href="/contact_us.html") 
-                  .p1 Свяжитесь с нами
-                a(href="/leave_feedback.html") 
-                  .p1 Оставить отзыв
-                a(href="/static_web.html")
-                  .p1 Полезные ссылки
-                a(href="#")
-                  .p1  Подать жалобу на контрольно-надзорные органы
-        include ../chunk/blocks/footer.pug
+  .main-feedback
+    include ../chunk/blocks/header.pug
+    .main-blocks
+      .main-block1
+        .path 
+          .p6 Главная
+          .block1_block 
+          .p6 Обратная связь       
+        .main-block1-blocks 
+          h1 Обратная связь
+          .blocks 
+            a(href="/straight_line.html").p2 Прямая линия с главой Республики Саха (Якутия)
+            .border
+            a(href="/news.html").p2 Свяжитесь с нами
+      .main-block2
+        .p1 На инвестиционный климат влияют различные факторы: бедность, преступность, инфраструктура, участие рабочей силы, национальная безопасность, политическая нестабильность, неопределённость режима, налоги, верховенство закона, имущественные права, правительственные постановления, прозрачность правительства и подотчётность правительства и другие.
+        .block2-links 
+          a(href="/straight_line.html") 
+            .p1 Прямая линия c главой Республики Саха (Якутия)
+          a(href="/contact_us.html") 
+            .p1 Свяжитесь с нами
+          a(href="/leave_feedback.html") 
+            .p1 Оставить отзыв
+          a(href="/static_web.html")
+            .p1 Полезные ссылки
+          a(href="/complaint.html")
+            .p1  Подать жалобу на контрольно-надзорные органы
+    include ../chunk/blocks/footer.pug

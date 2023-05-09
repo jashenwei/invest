@@ -1,0 +1,87 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+    - var title = "Заявка на получение меры поддержки";
+
+block page
+    .main-leaveF
+        include ../chunk/blocks/header.pug
+        .main-blocks
+            .main-block1
+                .path 
+                    .p6 Главная
+                    .block1_block 
+                    .p6 Страница
+                    .block1_block 
+                    .p6 Заявка на получение меры поддержки     
+                .main-block1-blocks 
+                    .blocks 
+                        a(href="/feedback.html").p2 Обратная связь
+                    h1 Заявка на получение меры поддержки              
+            .main-block4 
+                .block4-conts1
+                    .conts1-cont1 
+                        h4 Вы можете оставть отзыв просто заполнив форму
+                        .p1 Наш менеджер свяжется с Вами в течение одного рабочего дня
+                    form.conts1-cont2 
+                        .input 
+                            .p1 ФИО <div style="color:#FF1A1A;">*</div>
+                            input.input_body(placeholder="Иванов Иван Иванович" required)
+                        .input 
+                            .p1 Компания
+                            input.input_body(placeholder="Например: Apple")
+                        .input 
+                            .p1 Телефон
+                            input#phone.input_body(placeholder="Например: +7(999)-123-23-32")
+                        .input 
+                            .p1 E-mail <div style="color:#FF1A1A;">*</div>
+                            input.input_body(placeholder="Например: Password123412@gmail.com" required)
+                        .textarea 
+                            .p1 Интересующие меры поддержки <div style="color:#FF1A1A;">*</div>
+                            textarea(name="" cols="30" rows="10").textarea_body(placeholder="Введите сообщение" required)
+                        .textarea 
+                            .p1 Комментарий
+                            textarea(name="" cols="30" rows="10").textarea_body(placeholder="Введите сообщение" required)
+                        .supports__files__container__block
+
+                            .file 
+                                .p1 Прикрепить файл
+                                label.file_body   
+                                    input(type='file' id='file-input' accept='.txt, .pdf, .doc, .docx' onchange='handleFileUpload(this)')
+                                    label(for='file-input').l 
+                                        .p1 Прикрепить файл
+                                    span(class="js-value1")
+                                    .img 
+                                        include ../../static/img/paper.svg
+                        //label.file_body
+                            .p1 Прикрепить файл
+                            .img 
+                            include ../../static/img/paper.svg
+
+                        .checkbox 
+                            .checkbox_cont
+                                input(type="checkbox" id="checkbox_t9")
+                                label.checkbox_body(for="checkbox_t9")
+                                    .check
+                            .p1 Даю согласие на обработку персональных данных*
+                        .dang 
+                            .p4 <div style="color:#FF1A1A;">*</div>обязательно для заполнения
+                        +button1('Отправить')
+                .border
+                .block4-conts2
+                    h4 Наши социальные сети
+
+                    .cont1-body 
+                        a(href="#") 
+                            include ../../static/img/vk_grey.svg
+                            .p1 vk.com
+                        a(href="#") 
+                            include ../../static/img/od_grey.svg
+                            .p1 ok.ru
+                        a(href="#") 
+                            include ../../static/img/tg_grey.svg
+                            .p1 t.me
+
+        include ../chunk/blocks/footer.pug

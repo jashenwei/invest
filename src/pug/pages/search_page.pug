@@ -1,0 +1,49 @@
+extends ../layout/app
+include ../chunk/components/button2.pug
+include ../chunk/components/button1.pug
+block styles
+block vars
+    - var title = "Поиск";
+
+block page
+    .main-search
+        include ../chunk/blocks/header.pug
+        .main-blocks
+            .main-block1
+                .path 
+                    .p6 Главная
+                    .block1_block 
+                    .p6 Поиск
+                    .block1_block   
+                .main-block1-blocks 
+                    h1 ПОИСК
+                    .search_block
+                        .search
+                            input(placeholder="Найти")
+                            button 
+                                include ../../static/img/search.svg
+                        .res
+                            .res1 
+                                .p5 Результаты поиска
+                            .res2
+                                .p5 1 - 10
+                                .p5 из
+                                .p5 175
+            .main-block4 
+                .block4-cont 
+                    h5 IP-Телефония
+                    .p1 Заместитель генерального <div> директора</div>
+                .block4-cont 
+                    h5 IP-Телефония
+                    .p1 Заместитель генерального <div> директора</div>
+                .block4-cont 
+                    h5 IP-Телефония
+                    .p1 Заместитель генерального <div> директора</div>
+                .block4-cont 
+                    h5 IP-Телефония
+                    .p1 Заместитель генерального <div> директора</div>
+                .block4-cont 
+                    h5 IP-Телефония
+                    .p1 Заместитель генерального <div style="rgba(23, 93, 248, 1)"> директора</div>
+
+        include ../chunk/blocks/footer.pug

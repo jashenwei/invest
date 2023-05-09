@@ -11,7 +11,7 @@ block page
       .main-block
         .main-block__block1
           .block 
-            h1 ЗАГОЛОВОК
+            h1 Якутия Территория инвестиций 
             a.buttonForBid 
               .p5 Подать заявку
 
@@ -25,7 +25,7 @@ block page
           .block
             .img1
               include ../../static/img/orbit_logo.svg
-               
+
             span.radio-button__custom#c1
             span.radio-button__custom#c2
             span.radio-button__custom#c3
@@ -33,31 +33,38 @@ block page
             span.radio-button__custom#c5
             label.block_block#b1
               input(type="radio" name="radio" value='option1')
-              span.radio-button__label Подать заявку 
-            
+              span.radio-button__label Подать заявку
+
 
             label.block_block#b2
               input(type="radio" name="radio" value='option2')   
-              span.radio-button__label Инвесткарта 
-            
+              span.radio-button__label Инвесткарта
+
 
             label.block_block#b3
               input(type="radio" name="radio" value='option3' ) 
-              span.radio-button__label  Инвестплощадки 
-              
+              span.radio-button__label  Инвестплощадки
+
 
             label.block_block#b4
               input(type="radio" name="radio" value='option4')
               span.radio-button__label Меры поддержки 
-            
+
 
             label.block_block#b5
               input(type="radio" name="radio" value='option5') 
               span.radio-button__label Задать вопрос
-            
+
 
           .img
             include ../../static/img/ellipse.svg
+          .img2 
+            include ../../static/img/el2.svg
+        .main-block__block1Mob
+          .block 
+            h1 Якутия Территория инвестиций 
+            a.buttonForBid 
+              .p5 Подать заявку
       .main-block2
         .block
           h4 СИЛА ЯКУТИИ
@@ -89,6 +96,8 @@ block page
       .main-block3 
         .block 
           h2 ИНВЕСТСТАНДАРТ
+          .tool 
+            include ../../static/img/tooltip.svg
         .blocks
           .blocks__block#id1
             .background 
@@ -149,27 +158,33 @@ block page
               .border1 
             .container2
               h6 Агропромышленный комплекс
+              .p5 19 проектов
           .blocks__block
             .container3
               .border1 
             .container2
               h6 Социальная сфера
+              .p5 19 проектов
           .blocks__block
             .container1
               .border1 
             .container2
               h6 Транспорт и логистика
+              .p5 19 проектов
           .blocks__block
             .container3
               .border1 
             .container2
               h6 Туризм
+              .p5 19 проектов
         +button1('Все проекты','/invest_projects.html')
       .main-block5 
         h2 ОДНО ОКНО
         .blocks 
           .img 
             include ../../static/img/ellipse2.svg
+          .img2 
+            include ../../static/img/el3.svg
           .blocks_block
             .block#block1 
               h6 Подача заявки
@@ -186,7 +201,7 @@ block page
             .block#block4
               .ellipse 
                 include ../../static/img/refresh.svg 
-              h6 Подписание </br> соглашения 
+              h6 Подписание соглашения 
           .blocks__button
             +button2('Подать заявку')
       .main-block6
@@ -247,9 +262,9 @@ block page
           h6 Свяжитесь с нами
         .open-modal1
           button 
-          
+
             .p5 Отправить сообщение
-          
+
       include ../chunk/components/modalFeedback.pug
       .main-block9 
         .title 
@@ -258,6 +273,6 @@ block page
         +button1('Написать о проблеме')
       .main-block10 
         +button1('Направить обращение в аппарат полномочного представителя Президента РФ в ДФО')
-    
+
     include ../chunk/blocks/footer.pug
 

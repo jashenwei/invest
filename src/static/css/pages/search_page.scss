@@ -1,0 +1,158 @@
+.main-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+        // justify-content: flex-start;
+        // align-items: flex-start;
+    }
+
+    .main-blocks {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 80px;
+        width: 1440px;
+        min-height: 1054px;
+        height: auto;
+        padding: 41px 70px;
+        background: url("/img/bgndForPage1.svg"), white;
+
+        @include mobile {
+            width: 480px;
+            min-height: 646px;
+            padding: 20px 25px;
+            gap: 60px;
+            //width: auto;
+            
+        }
+
+        .main-block1 {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            @include mobile {
+                gap: 20px;
+            }
+
+            .path {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+
+                .p6 {
+                    color: #858585;
+
+                }
+
+                .block1_block {
+                    display: flex;
+                    width: 5px;
+                    height: 5px;
+                    background: #FF1A1A;
+                    transform: rotate(45deg);
+                }
+            }
+
+            .main-block1-blocks {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                @include mobile {
+                    gap: 60px;
+                }
+
+                h1,
+                .p2 {
+                    color: #1D1E33;
+                    text-decoration: none;
+                }
+
+                .search_block {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .search {
+                        display: flex;
+                        width: 1300px;
+                        border-bottom: 1px solid #858585;
+                        cursor: pointer;
+
+                        @include mobile {
+                            width: 325px;
+                        }
+
+                        input {
+                            width: 100%;
+                            background: none;
+                            border: none;
+                            font-family: $gilroyMedium;
+                            font-weight: 500;
+                            font-size: 24px;
+                            line-height: 140%;
+                            outline: none;
+                            letter-spacing: 0.06em;
+                        }
+
+                        button {
+                            border: none;
+                            background: none;
+                            cursor: pointer;
+
+                            svg>path {
+                                stroke: black !important;
+                            }
+                        }
+
+                    }
+
+                    .res {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+
+                        .res2 {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .main-block4 {
+            margin-bottom: 65px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .block4-cont {
+
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .p1 {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+
+                    div {
+                        color: rgba(23, 93, 248, 1);
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -13,9 +13,9 @@ block page
         .path 
           .p6 Главная
           .block1_block 
-          .p6 Страница
+          .p6 Обратная связь
           .block1_block 
-          .p6 Страница 1     
+          .p6 Оставить отзыв     
         .main-block1-blocks 
           .blocks 
             a(href="/feedback.html").p2 Обратная связь
@@ -23,9 +23,9 @@ block page
       .main-block4 
         .block4-conts1
           .conts1-cont1 
-            h4 Вы можете оставть отзыв просто заполнив форму
+            h4 Вы можете оставить отзыв просто заполнив форму
             .p1 Наш менеджер свяжется с Вами в течение одного рабочего дня
-            
+
           form.conts1-cont2 
             .input 
               .p1 ФИО <div style="color:#FF1A1A;">*</div>
@@ -33,11 +33,11 @@ block page
             .checkbox_conts
               h5 Удовлетворены ли Вы полученной услугой?
               .conts 
-                
+
                 .checkbox 
                   .checkbox_cont1
                     input(type="checkbox" id="checkbox_t1")
-                    label.checkbox_body(for="checkbox_t1")
+                    label.checkbox_body(for="checkbox_t1")#t1
                       .check
                   .p1 Да
                 .checkbox 
@@ -53,14 +53,14 @@ block page
               .conts 
                 .checkbox 
                   .checkbox_cont1
-                    input(type="checkbox" id="checkbox_t1")
-                    label.checkbox_body(for="checkbox_t")
+                    input(type="checkbox" id="checkbox_t3")
+                    label.checkbox_body(for="checkbox_t3")
                       .check
                   .p1 Да
                 .checkbox 
                   .checkbox_cont1
-                    input(type="checkbox" id="checkbox_t")
-                    label.checkbox_body(for="checkbox_t")
+                    input(type="checkbox" id="checkbox_t4")
+                    label.checkbox_body(for="checkbox_t4")
                       .check
                   .p1 Нет
               .p1 Если “Нет” то какой  вопрос не смогли найти ответ?
@@ -73,14 +73,14 @@ block page
               .conts 
                 .checkbox 
                   .checkbox_cont1
-                    input(type="checkbox" id="checkbox_t")
-                    label.checkbox_body(for="checkbox_t")
+                    input(type="checkbox" id="checkbox_t5")
+                    label.checkbox_body(for="checkbox_t5")
                       .check
                   .p1 Да
                 .checkbox 
                   .checkbox_cont1
-                    input(type="checkbox" id="checkbox_t")
-                    label.checkbox_body(for="checkbox_t")
+                    input(type="checkbox" id="checkbox_t6")
+                    label.checkbox_body(for="checkbox_t6")
                       .check
                   .p1 Нет
             .checkbox_conts
@@ -88,14 +88,14 @@ block page
               .conts 
                 .checkbox 
                   .checkbox_cont1
-                    input(type="checkbox" id="checkbox_t")
-                    label.checkbox_body(for="checkbox_t")
+                    input(type="checkbox" id="checkbox_t7")
+                    label.checkbox_body(for="checkbox_t7")
                       .check
                   .p1 Да
                 .checkbox 
                   .checkbox_cont1
-                    input(type="checkbox" id="checkbox_t")
-                    label.checkbox_body(for="checkbox_t")
+                    input(type="checkbox" id="checkbox_t8")
+                    label.checkbox_body(for="checkbox_t8")
                       .check
                   .p1 Нет
             .textarea 
@@ -112,7 +112,7 @@ block page
             +button1('Отправить')
         .border
         .block4-conts2
-          h4 Социальные сети Главы Республики Саха (Якутия)
+          h4 Наши социальные сети
 
           .cont1-body 
             a(href="#") 
@@ -124,5 +124,5 @@ block page
             a(href="#") 
               include ../../static/img/tg_grey.svg
               .p1 t.me
-      
+
     include ../chunk/blocks/footer.pug
