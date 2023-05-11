@@ -454,3 +454,120 @@ document.addEventListener("DOMContentLoaded", function () {
     }).mask(moneyInput);
   }
 });
+///calendar
+let calendar = new Vue({
+  el: '#calendar',
+  data() {
+    const month = new Date().getMonth();
+    const year = new Date().getFullYear();
+    return {
+      isMounted: false,
+      selectMonth: 1,
+      selectYear: 2023,
+      masks: {
+        weekdays: 'WWWW',
+        title: "MMMM"
+      },
+      attributes: [{
+          key: 1,
+          customData: {
+            title: 'Министерство труда и социального развития РС(Я)',
+            time: "15:00",
+            class: 'bg-red-600 text-white',
+          },
+          dates: new Date(year, month, 3),
+        },
+        {
+          key: 2,
+          customData: {
+            title: 'Министерство жилищно-коммунального хозяйства и энергетики РС(Я)',
+            time: "16:00",
+            class: 'bg-blue-500 text-white',
+          },
+          dates: new Date(year, month, 3),
+        },
+        {
+          key: 3,
+          customData: {
+            title: "Министерство сельского хозяйства РС(Я)",
+            time: "17:00",
+            class: 'bg-blue-500 text-white',
+          },
+          dates: new Date(year, month, 3),
+        },
+        {
+          key: 4,
+          customData: {
+            title: '',
+            time: "",
+            class: '',
+          },
+          dates: new Date(year, month, 5),
+        },
+        {
+          key: 6,
+          customData: {
+            title: '',
+            time: "",
+            class: 'bg-orange-500 text-white',
+          },
+          dates: {
+            months: 5,
+            ordinalWeekdays: {
+              2: 1
+            }
+          },
+        },
+      ],
+    };
+  },
+  methods: {
+    nextMonth() {
+      this.$refs.calendar.move(1)
+      this.selectMonth = this.$refs.calendar.pages[0].month
+    },
+    prevMonth() {
+      this.$refs.calendar.move(-1)
+      this.selectMonth = this.$refs.calendar.pages[0].month
+    },
+    changeYear(year) {
+      this.selectYear = year
+      this.$refs.calendar.move({
+        month: parseInt(this.selectMonth),
+        year: parseInt(year)
+      })
+    },
+    changeMonth(month) {
+      this.selectMonth = month
+      this.$refs.calendar.move({
+        month: parseInt(month),
+        year: parseInt(this.selectYear)
+      })
+    }
+  },
+  computed: {
+    thisMonth: function () {
+      if (this.isMounted) {
+        return this.$refs.calendar.pages[0].monthLabel
+      }
+      return
+    },
+    thisYear: function () {
+      if (this.isMounted) {
+        return this.$refs.calendar.pages[0].yearLabel
+      }
+      return
+    },
+  },
+  mounted() {
+    this.isMounted = true
+    this.selectMonth = this.$refs.calendar.pages[0].month
+    this.selectYear = this.$refs.calendar.pages[0].year
+    console.log(this.$refs.calendar)
+  }
+})
+ const select = document.querySelector('select');
+ select.onchange = () => {
+   tabs.querySelector('.active').classList.remove('active');
+   tabs.querySelectorAll('.tab')[select.a.selectedIndex].classList.add('active');
+ }

@@ -80,6 +80,119 @@
       gap: 80px;
 
       .block2-calendar {
+        .calendar {
+          display: flex;
+          flex-direction: column;
+          gap:32px;
+          width: 1300px;
+
+          .calendar__header {
+            max-width: 1300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .calendar__prev-month div:nth-child(2) {
+              cursor: pointer;
+            }
+
+            .calendar__next-month div:nth-child(1) {
+              cursor: pointer;
+            }
+
+            .calendar__prev-month,
+            .calendar__next-month {
+
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              div {
+                svg {
+                  path {
+
+                    fill: #FF1A1A;
+                  }
+
+
+                }
+              }
+
+              .p5 {
+                white-space: nowrap;
+              }
+
+            }
+
+          }
+
+          .swiper.calendar__swiper {
+            .swiper-wrapper.calendar__swiper-wrapper {
+              .swiper-slide.calendar__swiper-slide {
+                .custom-calendar {
+                  width: 1300px !important;
+                  border: none;
+                  padding: 0;
+
+                  .vc-weeks {
+                    border-right: 1px solid #1D1E33;
+                    padding: 0;
+                    width: 1300px;
+
+                  }
+
+                  .calendar__event {
+                    width: 141px;
+                  }
+                  
+                  .vc-day {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    border-left: 1px solid #1D1E33;
+                    border-bottom: 1px solid #1D1E33;
+                    padding: 15px 20px;
+                  }
+
+                  .vc-weekday {
+                    width: 186px;
+                    height: 69px;
+                    background: #1D1E33;
+                    color: #f9f9f9;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                    font-family: $gilroyMedium;
+                    letter-spacing: 0.06em;
+                    text-transform: capitalize;
+                    border-right: 1px solid #f9f9f9;
+                    box-sizing: border-box;
+                    padding: 20px;
+                  }
+
+                  .vc-weekday:nth-child(7) {
+                    border-right: none !important;
+                  }
+
+                  .vc-header {
+                    display: none;
+                  }
+
+                  .vc-arrows-container {
+                    display: none;
+                  }
+
+                  .day-label {
+                    //border: 1px solid #1D1E33
+                  }
+                }
+              }
+            }
+          }
+        }
+
         .calendar_head {
           display: flex;
           flex-direction: row;
@@ -97,14 +210,8 @@
             padding: 0px;
             gap: 10px;
             cursor: pointer;
-            svg {
-              path {
-
-                fill: #FF1A1A;
-              }
 
 
-            }
           }
         }
       }

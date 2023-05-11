@@ -6,32 +6,71 @@ block vars
   - var title = "Календарь мероприятий";
 
 block page
-    .main-calendar
-        include ../chunk/blocks/header.pug
-        .main-blocks
-            .main-block1
-                .path 
-                    .p1 Главная
-                    .block1_block 
-                    .p1 Инвестору
-                    .block1_block 
-                    .p1 Календарь мероприятий  
-                .main-block1-blocks 
-                    .blocks
-                        a(href="/investor.html").p2 Инвестору
-                    h1 Календарь мероприятий
-                    .p1 На инвестиционный климат влияют различные факторы: бедность, преступность, инфраструктура, участие рабочей силы, 
-                      | национальная безопасность, политическая нестабильность, неопределённость режима, налоги, верховенство закона, имущественные 
-                      | права, правительственные постановления, прозрачность правительства и подотчётность правительства и другие.
-            .main-block2
-                .block2-calendar 
-                  .calendar_head 
-                    button
-                      include ../../static/img/arrow_l_slider.svg
-                      .p5 Предыдущий месяц
-                    h2 Март
-                    button
-                      .p5 Следующий месяц 
-                      include ../../static/img/arrow_r_slider.svg
-                       
-        include ../chunk/blocks/footer.pug
+  script(src="js/vue2.js")
+  script(src="js/v-calendar.umd.min.js") 
+  .main-calendar
+    include ../chunk/blocks/header.pug
+    .main-blocks
+      .main-block1
+        .path 
+          .p1 Главная
+          .block1_block 
+          .p1 Инвестору
+          .block1_block 
+          .p1 Календарь мероприятий  
+        .main-block1-blocks 
+          .blocks
+            a(href="/investor.html").p2 Инвестору
+          h1 Календарь мероприятий
+          .p1 На инвестиционный климат влияют различные факторы: бедность, преступность, инфраструктура, участие рабочей силы, 
+            | национальная безопасность, политическая нестабильность, неопределённость режима, налоги, верховенство закона, имущественные 
+            | права, правительственные постановления, прозрачность правительства и подотчётность правительства и другие.
+      .main-block2
+        .block2-calendar 
+          //.calendar_head 
+            button
+              include ../../static/img/arrow_l_slider.svg
+              .p5 Предыдущий месяц
+            h2 Март
+            button
+              .p5 Следующий месяц 
+              include ../../static/img/arrow_r_slider.svg
+          div(id="calendar").calendar
+            .calendar__header
+              
+              .calendar__next-month      
+                div(@click="prevMonth()" class="calendar__next-month-btn paggination__arrow")
+                  include ../../static/img/arrow_l_slider.svg
+                div(class="calendar__next-month-text calendar__btn-text")
+                  span.p5 Предыдущий месяц
+              div(class="calendar__month" :class="{calendar__month_active: isMounted}")
+                span 
+                  h2(style="text-transform: capitalize;") {{thisMonth}}
+              .calendar__prev-month
+                div(class="calendar__prev-month-text calendar__btn-text")
+                  span.p5 Следующий месяц
+                div(@click="nextMonth()" class="calendar__prev-month-btn paggination__arrow")
+                  include ../../static/img/arrow_r_slider.svg
+                
+              
+            .swiper.calendar__swiper
+              .calendar__swiper-paggination-wrap
+                .calendar__swiper-paggination
+              .swiper-wrapper.calendar__swiper-wrapper
+                .swiper-slide.calendar__swiper-slide
+                  v-calendar(class="custom-calendar max-w-full" :masks="masks" :attributes="attributes" ref="calendar" disable-page-swipe is-expanded trim-weeks)
+                    template(v-slot:day-content="{ day, attributes}")
+                      div(class="flex flex-col h-full z-10 overflow-hidden")
+                        span(class="day-label text-sm text-gray-900")        
+                          .p5 {{ day.day }}
+                          </br> 
+                        div(class="flex-grow overflow-y-auto overflow-x-auto")
+                          div(v-for="attr in attributes" :key="attr.time" class="calendar__event")
+                            .calendar__event-time
+                              span 
+                                .p6 {{attr.customData.time}} 
+                            .calendar__event-text
+                              .p6 {{ attr.customData.title }} 
+                              </br> 
+                .swiper-slide.calendar__swiper-slide
+    include ../chunk/blocks/footer.pug
